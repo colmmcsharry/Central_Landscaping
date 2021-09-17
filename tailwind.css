@@ -136,7 +136,7 @@ blockquote {
 
 
 #guarantee {
-    background-image: url("./images/icons/guarantee.png");
+    background-image: url("./images/guarantee.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -149,7 +149,7 @@ blockquote {
 
 .shadedimage {
 
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url(".images/landscape/nightlandscape.jpeg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url(".images/nightlandscape.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

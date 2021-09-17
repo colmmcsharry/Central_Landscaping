@@ -685,8 +685,8 @@ video {
 .mb-10 {
 	margin-bottom: 2.5rem;
 }
-.mb-5 {
-	margin-bottom: 1.25rem;
+.mb-14 {
+	margin-bottom: 3.5rem;
 }
 .mb-2 {
 	margin-bottom: 0.5rem;
@@ -705,9 +705,6 @@ video {
 }
 .mb-1 {
 	margin-bottom: 0.25rem;
-}
-.mb-14 {
-	margin-bottom: 3.5rem;
 }
 .block {
 	display: block;
@@ -1163,7 +1160,7 @@ blockquote {
 
 .wrapper_carousel {
     background: var(--primary-grey);
-    height: auto;
+    height: 500px;
     border-radius: 12px;
     /* box-shadow: 2px 2px 12px 2px #a4a4a4; */
   
@@ -1183,6 +1180,7 @@ blockquote {
   .carousel-item {
     opacity: 0;
     position: absolute;
+   
     transition: 500ms ease-in-out;
     visibility: hidden;
     display: flex;
@@ -1362,6 +1360,9 @@ blockquote {
   
   @media only screen and (max-width: 400px) {
   
+    .wrapper_carousel {
+        height: 700px;
+    }
   
     .wrapper_carousel .page_title {
         margin-top: 2rem !important;

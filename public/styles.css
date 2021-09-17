@@ -1041,7 +1041,7 @@ nav li {font-family:sans-serif}
     margin:20px auto;
     width: 300px;
     font-weight: bold;
-    background:url('../public/images/quotes.png') top left no-repeat, url('../public/images/closequotes.png') bottom right no-repeat;
+    background:url('./images/quotes.png') top left no-repeat, url('./images/closequotes.png') bottom right no-repeat;
     background-size:60px 60px;
    padding:40px 10px;
     display:block;
@@ -1070,7 +1070,7 @@ blockquote {
 
 .cardimg { 
     
-    background:url('../public/images/imprinted1.jpeg');
+    background:url('./images/imprinted1.jpeg');
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -1131,7 +1131,7 @@ blockquote {
 
 
 #guarantee {
-    background-image: url("/public/images/icons/guarantee.png");
+    background-image: url("./images/icons/guarantee.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1144,7 +1144,7 @@ blockquote {
 
 .shadedimage {
 
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url("/public/images/landscape/nightlandscape.jpeg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url("./images/landscape/nightlandscape.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

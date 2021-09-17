@@ -25,12 +25,39 @@ body p:last-child { margin-bottom: 0em; }
 /* basic suff ends */
 
 
-h1,h2, li {
+h1,h2, li, h4 {
     font-family:'Simonetta', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .heroheading {
     font-family: 'Simonetta', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.myfooter {
+  background-color:#253322;
+}
+
+.collage {
+  background-image: url(./images/landscapcollage.jpg);
+  background-size:cover;
+  position:relative;
+}
+
+.collage::before {
+  content:"";
+  background-color:#699C4A;
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:-15px;
+  top:15px;
+  z-index:-1;
+}
+@media-screen and (max-width:450px){
+  .collage::before {
+    left:-25px;
+    top:25px;
+  }
 }
 
 
@@ -74,11 +101,58 @@ blockquote {
 /* servcards starts */
 
 .cardimg { 
-    
-    background:url('./images/imprinted1.jpeg');
+    background:url('./images/imprintedsmol.jpeg');
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
+}
+
+#driveway {
+  background:url('./images/driveway.jpg');
+  background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+}
+
+#overhaul {
+  background:url('./images/nightlandscape.jpeg');
+  background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+#plaster {
+  background:url('./images/plaster.jpeg');
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
+#landscape {
+  background:url('./images/patiosmol.jpeg');
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
+#walls {
+  background:url('./images/wallsmall.jpeg');
+  background-position: center;
+}
+
+#lawns {
+  background:url('./images/pavingmob.jpg');
+  background-size:cover;
+  background-position: 20% 10%;
+  background-repeat:no-repeat;
+}
+
+#patio {
+  background:url('./images/patiosml.jpeg');
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
 }
 
 .circle {
@@ -149,7 +223,7 @@ blockquote {
 
 .shadedimage {
 
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url(".images/nightlandscape.jpeg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url("./images/nightlandscape.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,7 +239,7 @@ blockquote {
 
 .wrapper_carousel {
     background: var(--primary-grey);
-    height: 500px;
+    height: 700px;
     border-radius: 12px;
     /* box-shadow: 2px 2px 12px 2px #a4a4a4; */
   
@@ -346,6 +420,7 @@ blockquote {
         position: relative;
         left: 50%;
         margin-left: -50vw;
+        height:auto
     }
   
     .carousel-data {
@@ -366,7 +441,7 @@ blockquote {
   @media only screen and (max-width: 400px) {
   
     .wrapper_carousel {
-        height: 700px;
+        height: auto;
     }
   
     .wrapper_carousel .page_title {

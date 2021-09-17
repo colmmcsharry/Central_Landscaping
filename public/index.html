@@ -4,10 +4,532 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS</title>
+    <title>Central Landscaping</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Simonetta&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+      defer
+    ></script>
+   
+    <script src="https://use.fontawesome.com/4e3025a09e.js"></script>
 </head>
 <body>
-    <h1 class="pt-36 font-bold text-4xl text-purple-700 text-center">Hello Tailwind CSS</h1>
+  
+    <!-- needs to be container so the gradient doesn't affect children text -->
+    <div id="mybigpiccontainer" class="mb-20">
+        <div id="mybigpic">
+
+
+            <!-- navbar begins  -->
+
+            <nav
+            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6" id="mynavbar"
+            x-data="{ isOpen: false }"
+            @keydown.escape="isOpen = false"
+            :class="{ 'shadow-lg bg-gray-800' : isOpen , 'bg-gray-800' : !isOpen}"
+          >
+            <!--Logo etc-->
+            <div>
+              <img src="images/pavinglogodarker.png" width='220px'  />
+            </div>
+      
+            <!--Toggle button (hidden on large screens)-->
+            <button
+              @click="isOpen = !isOpen"
+              type="button"
+              class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+              :class="{ 'transition transform-180': isOpen }"
+            >
+              <svg
+                class="w-6 h-6 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  x-show="isOpen"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+                <path
+                  x-show="!isOpen"
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                />
+              </svg>
+            </button>
+      
+            <!--Menu-->
+            <div
+              class="flex-grow w-full lg:flex lg:items-center lg:w-auto"
+              :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+              @click.away="isOpen = false"
+              x-show.transition="true"
+            >
+              <ul
+                class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex"
+              >
+
+              <li class="mr-3">
+                <a
+                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                  href="#"
+                  @click="isOpen = false"
+                  > <img class="inline w-10 p-2" src="./images/icons/phone.svg"/> 083 838 1780
+                </a>
+              </li>
+
+
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-white no-underline"
+                    href="#"
+                    @click="isOpen = false"
+                    >Home
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="#"
+                    @click="isOpen = false"
+                    >About
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="#"
+                    @click="isOpen = false"
+                    >Services
+                  </a>
+                </li>
+                <li class="mr-3">
+                    <a
+                      class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                      href="#"
+                      @click="isOpen = false"
+                      >Gallery
+                    </a>
+                  </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="#"
+                    @click="isOpen = false"
+                    >Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+          <!--Container for content-->
+          <div class="container mx-auto mt-24 bg-white shadow-lg md:mt-18"></div>
+
+
+          <!-- navbar ends -->
+
+
+
+
+        <div class="relative ml-8 xl:ml-32 top-1/4">
+          <h1 class="relative mb-8 text-3xl text-green-400 lg:text-8xl heroheading ">Dublin's Best for</h1>
+            <ul class="relative mb-8">
+              <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Patios</li>
+              <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Driveways</li>
+              <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Imprinted Concrete</li>
+              <li class="relative text-3xl italic text-white">- & more!</li>
+
+             
+            </ul>
+
+             <button class="relative px-5 py-2 font-sans text-3xl font-bold text-gray-900 bg-green-400 rounded-full cta"> Get in Touch </button>
+           
+        </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- About Section  -->
+
+      <h2 class="mb-10 text-6xl text-center lg:text-8xl ">About</h2>
+
+      <img class="px-2 mx-auto border border-gray-100 border-solid shadow-lg mb-14"  src="images/landscapcollagesmol.jpg" alt="collage" />
+
+
+      <div class="max-w-4xl px-4 mx-auto mb-20 text-gray-800 px-auto"> 
+        <p>We started Central Landscaping <strong>over 20 years ago</strong> with a mission to provide the <b>best value</b> in a range of landscaping services.</p>
+
+           <p class="mb-10"> We cover everything from  <strong>gardening, paving, concrete imprinting, driveways</strong> and anything else you ask of us. </p>
+
+           <hr class="w-2/4 mx-auto border-green-100 border-solid border-1">
+
+
+           <aside class="pquote">
+            <blockquote>
+                <p>A great company to deal with. Couldn’t be any happier with our new driveway</p>
+            </blockquote>
+        </aside>
+
+        <aside class="pquote">
+            <blockquote>
+                <p>Top quality workmanship and competitive prices. Would definitely recommend</p>
+            </blockquote>
+        </aside>
+
+        <hr class="w-2/4 mx-auto mb-10 border-green-100 border-solid border-1">
+        
+        <p>We are a <b>local, family-run business </b> and we care about our community. We serve the entire county of Dublin and surrounding areas.
+
+            </p>
+
+        <p> We are fully licensed/insured and our <b>quality of work</b> is unparallelled . Check out our services and work examples below, and <strong>give us a call</strong> to discuss your next project! </p>
+
+        
+
+
+      </div>
+
+
+
+
+       <!-- 
+
+        SERVICES SECTION 
+
+        -->
+
+
+
+      <h2 class="mb-10 text-6xl text-center lg:text-8xl ">Services</h2>
+
+<div class="mb-20 text-center outerwrapper">
+    <div class="relative w-full mx-auto text-center border-solid lg:inline-grid lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer ">
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/icon.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto error esse a cupiditate facere in eaque, laudantium reprehenderit quia quasi.</p>
+        </div>
+       
+    </div>
+    <button class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See More </button>
+</div>
+
+
+
+
+
+<!-- Gallery -->
+
+
+<h2 class="mb-10 text-6xl text-center lg:text-8xl ">Gallery</h2>
+
+<div class="mb-20 text-center outerwrapper">
+    <div class="relative w-full mx-auto text-center border-solid galcontainer lg:inline-grid lg:px-20 lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer">
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6"" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6" src="images/pavingfb.jpg" width="300px" height="300px" />
+    </div>
+
+<button class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See More </button>
+</div>
+
+<!-- quality section -->
+
+<div class="w-full py-56 mb-20 text-center bg-green-800">
+
+    <div class="awards"> 
+                <h4 class="mb-4 text-2xl font-bold text-center text-green-400 ">Why Choose Us?</h4>
+
+                <div class="inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                <img class="mx-auto mb-2" src="images/icons/thumbsup.png" width="70px" height="70px"/>
+                Fully Licensed and Insured
+                </div>
+
+                <div class="inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                    <img class="mx-auto mb-2" src="images/icons/thumbsup.png" width="70px" height="70px"/>
+                    Fully Licensed and Insured
+                    </div>
+
+                    <div class="inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/thumbsup.png" width="70px" height="70px"/>
+                        Fully Licensed and Insured
+                        </div>
+                        
+                        <div class="inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                            <img class="mx-auto mb-2" src="images/icons/thumbsup.png" width="70px" height="70px"/>
+                            Fully Licensed and Insured
+                            </div>     
+
+
+            <div class="mt-10 imprinting">
+                <h4 class="mb-4 text-2xl font-bold text-center text-green-400 ">Our Concrete Imprinting</h4>
+
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+                    <div class="block inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
+                        <img class="mx-auto mb-2" src="images/icons/tick.png" width="35px" height="35px"/>
+                        Fully Licensed and insured
+                    </div>
+
+                
+
+            </div>
+
+            <div class="mt-10 imprinting">
+                <h4 class="px-4 mb-4 text-xl font-bold text-center text-green-400 ">Variety of Patterns and Colours to Choose From</h4>
+                <img class="block inline-block mx-auto" src="images/icons/pattern1.png" width="120px" height="110px"/>
+                <img class="block inline-block mx-auto" src="images/icons/pattern2.png" width="120px" height="110px"/>
+                <img class="block inline-block mx-auto" src="images/icons/pattern3.png" width="120px" height="110px"/>
+                <img class="block inline-block mx-auto" src="images/icons/pattern4.png" width="120px" height="110px"/>
+                <img class="block inline-block mx-auto" src="images/icons/pattern6.png" width="120px" height="110px"/>
+                <img class="block inline-block mx-auto" src="images/icons/pattern5.png" width="120px" height="110px"/>
+                
+
+            </div>
+
+    </div>
+
+</div>
+
+    <!-- Testimonials -->
+
+    <h2 class="mb-20 text-6xl text-center lg:text-8xl ">Testimonials</h2>
+
+    <section class="z-0 flex flex-col justify-center w-full wrapper_carousel" role="region" aria-label="testimonial carousel">
+        <div class="relative flex items-center justify-center w-full mt-8 mb-8 overflow-hidden carousel-data">
+            <div class="carousel-item" role="group" aria-label="slide 1 of 5">
+                <div class="author-profile">
+                    <img src="https://source.unsplash.com/random/?portrait,face/108x108">
+                    
+                    
+                </div>
+                <p class="my-8 italic text_caption">
+                    Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                </p>
+                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                <span class="caption-author">
+                    - William T. Riker
+                </span>
+            </div>
+            <div class="carousel-item" role="group" aria-label="slide 2 of 5">
+                <div class="author-profile">
+                    <img src="https://source.unsplash.com/random/300×600/?model,portrait,face">
+                </div>
+                <p class="my-8 italic text_caption">
+                    Taking seamless key performance indicators offline to maximise the long tail. User generated content in real-time will have multiple touchpoints for offshoring.
+                </p>
+                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                <span class="caption-author">
+                    - Sasha Banks
+                </span>
+                
+            </div>
+            <div class="carousel-item" role="group" aria-label="slide 3 of 5">
+                <div class="author-profile">
+                    <img src="https://source.unsplash.com/random/300×600/?woman,portrait,face">
+                </div>
+                <p class="my-8 italic text_caption">
+                    At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+                </p>
+
+                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                <span class="caption-author">
+                    - Dana E. Owens
+                </span>
+               
+            </div>
+            <div class="carousel-item" role="group" aria-label="slide 4 of 5">
+                <div class="author-profile">
+                    <img src="https://source.unsplash.com/random/300×600/?man,portrait,face">
+                </div>
+                <p class="my-8 italic text_caption">
+                    Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination.
+                </p>
+                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                <span class="caption-author">
+                    - Robert Booker
+                </span>
+            </div>
+            <div class="carousel-item" role="group" aria-label="slide 5 of 5">
+                <div class="author-profile">
+                    <img src="https://source.unsplash.com/random/300×600/?teen,portrait,face">
+                </div>
+                <p class="my-8 italic text_caption">
+                    Collaboratively administrate markets dynamically procrastinate user directed convergence after installed base benefits without revolutionary ROI.
+                </p>
+                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                <span class="caption-author">
+                    - Ororo Munroe
+                </span>
+            </div>
+        </div>
+        <div class="flex items-center carousel-indicators">    
+        </div>
+        <div class="flex justify-end mt-auto carousel-controls" aria-label="carousel controls">
+            <button type="button" class="button_carousel-prev" aria-label="previous"><i class="fas fa-caret-left"></i></button>
+            <button type="button" class="ml-1 button_carousel-next" aria-label="next"><i class="fas fa-caret-right"></i></button>
+        </div>
+      </section>
+
+      <hr class="w-2/4 mx-auto mb-20 border-green-100 border-solid border-1">
+
+      <!-- wrapup section -->
+   
+
+      
+
+      <script src="./carousel.js"></script>
 </body>
+
+<div class="w-full mb-20 text-center " id="guarantee">
+<img class="inline m-auto w-36 xl:w-64" src='./images/icons/facebookratings.svg' /> 
+
+<img class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
+</div>
+
+<div class="grid w-full shadedimage place-items-center">
+
+<div class="p-4 text-2xl font-bold text-white xl:text-4xl convinced">
+    <p class="font-extrabold text-green-400">Still not convinced?</p>
+
+    <p>We'd love to have a chat and go over anything you're not sure about!</p>
+    <span class="text-green-400"><img class="inline pr-4" src="./images/icons/phone.svg"/>    087 133 1301   </span>
+</div>
+
+</div>
+
+
+<div class="w-full text-white bg-green-900">
+    <div class="px-10 pb-12 xl:px-40 lg:px-20 md:px-10 sm:px-5">
+        <div class="flex flex-col justify-start w-full pt-12 space-y-2 sm:flex-row">
+            <div class="flex flex-col w-full pr-6 space-y-4 sm:w-2/5">
+                <img src="images/pavinglogodarker.png" width='220px'  />
+                <span class="text-green-100 opacity-80"><img class="inline w-10 pr-4" src="./images/icons/phone.svg"/>    087 133 1301  </span> 
+                <span class="text-green-100 opacity-80"><img class="inline w-10 pr-4" src="./images/icons/envelope.svg"/> salescentrallandscaping@gmail.com  </span>        
+            </div>
+            <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                <a class="opacity-60">About Us</a>
+                <a class="opacity-60">Services</a>
+                <a class="opacity-60">Gallery</a>
+                <a class="opacity-60">Contact</a>
+            </div>
+            <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                <a class="opacity-60">Disclaimer</a>
+                <a class="opacity-60">Testimonials</a>
+                <a class="opacity-60">Privacy Policy</a>
+                <a class="opacity-60">Terms of Service</a>
+            </div>
+            <div class="flex items-end w-full pt-6 mb-1 sm:w-1/5">
+                <div class="flex flex-row space-x-4">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-google"></i>
+                </div>
+            </div>
+        </div>
+        <div class="pt-2 opacity-60">
+            <p>© 2021 Central Landscaping</p>
+        </div>
+    </div>
+</div>
+
 </html>

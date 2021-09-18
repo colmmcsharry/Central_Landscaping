@@ -17,7 +17,6 @@ html {
 
 body {
     margin: 0; /* interferes with 100vw */
-    scroll-behavior: smooth;
 }
 
 p { margin-bottom: 1em;
@@ -67,6 +66,9 @@ h1,h2, li, h4 {
   }
 }
 
+#ctabutton:hover {
+  background-color:green;
+}
 
 nav li {font-family:sans-serif}
 

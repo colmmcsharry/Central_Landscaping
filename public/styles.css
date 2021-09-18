@@ -31,6 +31,7 @@ html {
 */
 
 html {
+	scroll-behavior: smooth;
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -47,6 +48,10 @@ Remove the margin in all browsers.
 body {
 	margin: 0;
 }
+
+#ctabutton:hover {
+	background-color:rgb(148, 226, 193);
+  }
 
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)

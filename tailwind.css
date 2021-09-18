@@ -12,9 +12,12 @@
 html {
     margin:0;
     padding:0;
+   scroll-behavior: smooth; 
 }
+
 body {
     margin: 0; /* interferes with 100vw */
+    scroll-behavior: smooth;
 }
 
 p { margin-bottom: 1em;

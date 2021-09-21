@@ -646,8 +646,26 @@ video {
 .top-5 {
 	top: 1.25rem;
 }
+.top-3\/4 {
+	top: 75%;
+}
 .top-2\/4 {
 	top: 50%;
+}
+.top-16 {
+	top: 4rem;
+}
+.top-24 {
+	top: 6rem;
+}
+.top-28 {
+	top: 7rem;
+}
+.top-32 {
+	top: 8rem;
+}
+.top-36 {
+	top: 9rem;
 }
 .z-0 {
 	z-index: 0;
@@ -1043,6 +1061,10 @@ video {
 .shadow-lg {
 	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline-white {
+	outline: 2px dotted white;
+	outline-offset: 2px;
 }
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -1642,8 +1664,12 @@ blockquote {
   
   @media (min-width: 1024px) {
 
-	.lg\:top-40 {
-		top: 10rem;
+	.lg\:top-20 {
+		top: 5rem;
+	}
+
+	.lg\:top-24 {
+		top: 6rem;
 	}
 
 	.lg\:inline-block {
@@ -1696,6 +1722,10 @@ blockquote {
   
   @media (min-width: 1280px) {
 
+	.xl\:top-52 {
+		top: 13rem;
+	}
+
 	.xl\:ml-32 {
 		margin-left: 8rem;
 	}
@@ -1724,6 +1754,10 @@ blockquote {
 }
   
   @media (min-width: 1536px) {
+
+	.\32xl\:top-32 {
+		top: 8rem;
+	}
 
 	.\32xl\:px-48 {
 		padding-left: 12rem;

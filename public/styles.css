@@ -997,13 +997,13 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(110, 231, 183, var(--tw-text-opacity));
 }
-.text-white {
-	--tw-text-opacity: 1;
-	color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
 .text-green-100 {
 	--tw-text-opacity: 1;
 	color: rgba(209, 250, 229, var(--tw-text-opacity));
+}
+.text-white {
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 .text-gray-800 {
 	--tw-text-opacity: 1;

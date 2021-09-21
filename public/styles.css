@@ -646,6 +646,9 @@ video {
 .top-5 {
 	top: 1.25rem;
 }
+.top-2\/4 {
+	top: 50%;
+}
 .z-0 {
 	z-index: 0;
 }
@@ -1638,6 +1641,10 @@ blockquote {
 }
   
   @media (min-width: 1024px) {
+
+	.lg\:top-40 {
+		top: 10rem;
+	}
 
 	.lg\:inline-block {
 		display: inline-block;

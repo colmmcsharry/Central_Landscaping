@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Landscaping</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Simonetta&display=swap" rel="stylesheet">
+
+<script
+src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+defer
+></script>
+
+</head>
+<body class="pagebody">
+           
+           
+           <!-- navbar begins  -->
+
+            <nav
+            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6" id="mynavbar"
+            x-data="{ isOpen: false }"
+            @keydown.escape="isOpen = false"
+            :class="{ 'shadow-lg bg-gray-800' : isOpen , 'bg-gray-800' : !isOpen}"
+          >
+            <!--Logo etc-->
+            <div>
+                <a href="./index.html"><img src="images/pavinglogodarker.png" width='220px'  /></a>
+            </div>
+      
+            <!--Toggle button (hidden on large screens)-->
+            <button
+              @click="isOpen = !isOpen"
+              type="button"
+              class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+              :class="{ 'transition transform-180': isOpen }"
+            >
+              <svg
+                class="w-6 h-6 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  x-show="isOpen"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+                <path
+                  x-show="!isOpen"
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                />
+              </svg>
+            </button>
+      
+            <!--Menu-->
+            <div
+              class="flex-grow w-full lg:flex lg:items-center lg:w-auto"
+              :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+              @click.away="isOpen = false"
+              x-show.transition="true"
+            >
+              <ul
+                class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex"
+              >
+
+              <li class="mr-3">
+                <a
+                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                  href="#"
+                  @click="isOpen = false"
+                  > <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 </a>
+                  
+                  <a
+                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                  href="#"
+                  @click="isOpen = false"
+                  > 
+                  <img class="inline w-10 p-2" src="./images/officephone.png"/> 01 901 0310 </a>
+                
+              </li>
+
+
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline"
+                    href="./index.html"
+                    @click="isOpen = false"
+                    >Home
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 font-bold text-white no-underline hover:text-white hover:text-underline"
+                    href="./about.html"
+                    @click="isOpen = false"
+                    >About
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="./index.html"
+                    @click="isOpen = false"
+                    >Services
+                  </a>
+                </li>
+                <li class="mr-3">
+                    <a
+                      class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                      href="./gallery.html"
+                      @click="isOpen = false"
+                      >Gallery
+                    </a>
+                  </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="#contact"
+                    @click="isOpen = false"
+                    >Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+          <!--Container for content-->
+          <div class="container mx-auto mt-24 bg-white shadow-lg md:mt-18"></div>
+
+
+          <!-- navbar ends -->
+
+
+
+
+<!-- About Section  -->
+
+<section class="pagewrapper">
+
+<h2 class="mb-10 text-6xl text-center lg:text-8xl " id="about">About</h2>
+
+    
+    <div class="h-64 px-2 mx-auto border border-gray-100 border-solid shadow-lg w-72 sm:h-72 sm:w-96 collage mb-14" alt="collage">  </div>
+
+
+    <div class="max-w-4xl px-4 mx-auto mb-20 text-gray-800 px-auto"> 
+
+    <p>We started Central Landscaping <strong>over 20 years ago</strong> with a mission to provide the <b>best value</b> in a range of landscaping services.</p>
+
+        <p class="mb-10"> We cover everything from  <strong>gardening, paving, concrete imprinting, driveways</strong> and anything else you ask of us. </p>
+
+        <hr class="w-2/4 mx-auto border-green-100 border-solid border-1">
+
+
+        <aside class="pquote">
+        <blockquote>
+            <p>A great company to deal with. Couldn’t be any happier with our new driveway</p>
+        </blockquote>
+    </aside>
+
+    <aside class="pquote">
+        <blockquote>
+            <p>Top quality workmanship and competitive prices. Would definitely recommend</p>
+        </blockquote>
+    </aside>
+
+    <hr class="w-2/4 mx-auto mb-10 border-green-100 border-solid border-1">
+    
+    <p>We are a <b>local, family-run business </b> and we care about our community. We serve the entire county of Dublin and surrounding areas.
+
+        </p>
+
+    <p> We are fully licensed/insured and our <b>quality of work</b> is unparallelled. Check out our services and work examples below, and <strong>give us a call</strong> to discuss your next project! </p>
+
+    
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+<div class="relative w-full top-2 outline mycont">
+  
+<img class="w-full" src="./images/christmas-trees-bottomgreen.svg" height="300px" />
+</div>
+
+<div class="w-full pt-10 text-white myfooter">
+  
+    <div class="px-10 pb-12 xl:px-40 lg:px-20 md:px-10 sm:px-5">
+        <div class="flex flex-col justify-start w-full pt-12 space-y-2 sm:flex-row">
+            
+            <div class="flex flex-col w-full pr-6 space-y-4 sm:w-2/5">
+                
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/mobphone.png"/>   087 333 1301  </span> 
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/officephone.png"/>    01 901 0310   </span> 
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/icons/envelope.svg"/> salescentrallandscaping@gmail.com  </span>    
+                <span class="text-green-100 opacity-80">Lower Road, St.Edmundsbury, Lucan Village, Dublin</span>    
+            </div>
+            <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                <a class="opacity-60">About Us</a>
+                <a class="opacity-60">Services</a>
+                <a class="opacity-60">Gallery</a>
+                <a class="opacity-60">Contact</a>
+            </div>
+            <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                <a class="opacity-60">Disclaimer</a>
+                <a class="opacity-60">Testimonials</a>
+                <a class="opacity-60">Privacy Policy</a>
+                <a class="opacity-60">Terms of Service</a>
+            </div>
+            <div class="relative flex items-end w-full pt-6 mb-1 sm:w-1/5">
+                
+                <div class="flex flex-row space-x-4">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-google"></i>
+                </div>
+            </div>
+        </div>
+        <div class="pt-2 opacity-60" id="contact">
+            <p class="text-xs">© 2021 Central Landscaping</p>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -35,14 +35,14 @@
             <!-- navbar begins  -->
 
             <nav
-            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6" id="mynavbar"
+            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6 bg-green-900" id="mynavbar"
             x-data="{ isOpen: false }"
             @keydown.escape="isOpen = false"
-            :class="{ 'shadow-lg bg-gray-800' : isOpen , 'bg-gray-800' : !isOpen}"
+            :class="{ 'shadow-lg' : isOpen , '' : !isOpen}"
           >
-            <!--Logo etc-->
+            <!--Logo-->
             <div>
-              <img src="images/pavinglogodarker.png" width='220px'  />
+             <a href="./index.html"><img src="images/pavinglogodarker.png" width='220px'  /></a>
             </div>
       
             <!--Toggle button (hidden on large screens)-->
@@ -101,7 +101,7 @@
 
                 <li class="mr-3">
                   <a
-                    class="inline-block px-4 py-2 text-white no-underline"
+                    class="inline-block px-4 py-2 font-bold text-white no-underline"
                     href="#"
                     @click="isOpen = false"
                     >Home
@@ -110,7 +110,7 @@
                 <li class="mr-3">
                   <a
                     class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
-                    href="#about"
+                    href="./about.html"
                     @click="isOpen = false"
                     >About
                   </a>
@@ -126,7 +126,7 @@
                 <li class="mr-3">
                     <a
                       class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
-                      href="#gallery"
+                      href="./gallery.html"
                       @click="isOpen = false"
                       >Gallery
                     </a>
@@ -158,61 +158,22 @@
               <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Patios</li>
               <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Driveways</li>
               <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Imprinted Concrete</li>
-              <li class="relative text-3xl italic text-white">- & more!</li>
+              <li class="relative text-3xl italic text-white"> &nbsp; &nbsp;  & more!</li>
 
              
             </ul>
 
-             <a id="ctabutton" href="#contact" class="relative px-5 py-2 font-sans text-3xl font-bold text-gray-900 bg-green-400 rounded-full hover:bg-green-100 cta"> Get in Touch </a>
+             <a id="ctabutton" href="#contact" class="relative px-10 py-2 font-sans text-3xl font-bold text-gray-900 bg-green-400 rounded-full hover:bg-green-100 cta"> Get in Touch </a>
            
         </div>
 
+<img class="grassdivider" src="./images/image.png" />
 
         </div>
       </div>
 
 
-      <!-- About Section  -->
-
-      <h2 class="mb-10 text-6xl text-center lg:text-8xl " id="about">About</h2>
-
-   
-      <div class="h-64 px-2 mx-auto border border-gray-100 border-solid shadow-lg w-72 sm:h-72 sm:w-96 collage mb-14" alt="collage">  </div>
-    
-
-      <div class="max-w-4xl px-4 mx-auto mb-20 text-gray-800 px-auto"> 
-
-        <p>We started Central Landscaping <strong>over 20 years ago</strong> with a mission to provide the <b>best value</b> in a range of landscaping services.</p>
-
-           <p class="mb-10"> We cover everything from  <strong>gardening, paving, concrete imprinting, driveways</strong> and anything else you ask of us. </p>
-
-           <hr class="w-2/4 mx-auto border-green-100 border-solid border-1">
-
-
-           <aside class="pquote">
-            <blockquote>
-                <p>A great company to deal with. Couldn’t be any happier with our new driveway</p>
-            </blockquote>
-        </aside>
-
-        <aside class="pquote">
-            <blockquote>
-                <p>Top quality workmanship and competitive prices. Would definitely recommend</p>
-            </blockquote>
-        </aside>
-
-        <hr class="w-2/4 mx-auto mb-10 border-green-100 border-solid border-1">
-        
-        <p>We are a <b>local, family-run business </b> and we care about our community. We serve the entire county of Dublin and surrounding areas.
-
-            </p>
-
-        <p> We are fully licensed/insured and our <b>quality of work</b> is unparallelled. Check out our services and work examples below, and <strong>give us a call</strong> to discuss your next project! </p>
-
-        
-
-
-      </div>
+      
 
 
 
@@ -223,74 +184,74 @@
 
         -->
 
+<div class="servwrapper">
 
+            <h2 class="mb-10 text-6xl text-center lg:text-8xl" id="services">Services</h2>
 
-      <h2 class="mb-10 text-6xl text-center lg:text-8xl" id="services">Services</h2>
+        <div class="mb-20 text-center outerwrapper">
+            <div class="relative w-full mx-auto text-center border-solid lg:inline-grid lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer ">
 
-<div class="mb-20 text-center outerwrapper">
-    <div class="relative w-full mx-auto text-center border-solid lg:inline-grid lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer ">
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/concrete.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+                    <p class="p-2 text-gray-400"> Offering the most comprehensive range of imprinted concrete services throughout Dublin and surrounding areas, you are guaranteed to find just what you’re looking for with our exclusive range of patterns and colours.</p>
+                </div>
 
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/concrete.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
-            <p class="p-2 text-gray-400"> Offering the most comprehensive range of imprinted concrete services throughout Dublin and surrounding areas, you are guaranteed to find just what you’re looking for with our exclusive range of patterns and colours.</p>
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="landscape"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/trowel.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Landscaping</h3>
+                    <p class="p-2 text-gray-400"> Skilled in all aspects of landscaping, including paving, decking, carpentry, masonry and stone work, our dedicated craftsmen can handle any project. The complete green solution for urban, suburban and rural landscape design</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="patio"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/patiopn.png" width="65px" height="65px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Patio Installation</h3>
+                    <p class="p-2 text-gray-400">A beautifully designed patio is a perfect complement to your home. Whatever the size or shape of your garden, our professional installers are able to create any appearance to suit different tastes, budgets and individual requirements.</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="driveway"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/drivway.png" width="65px" height="65px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Driveways</h3>
+                    <p class="p-2 text-gray-400"> Our highly skilled team can install a high quality paved driveway for you and your family to enjoy for many years. We supply only the best stone for use on your new drive with many extra options....</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="plaster"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full scale-y-[-1]" src="images/trowel.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Plastering</h3>
+                    <p class="p-2 text-gray-400">Our team can plaster/render or dash your new garden walls and piers to complement a new garden or match new walls to the finish on your house.</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="walls"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/wall.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Garden Walls/Pillars </h3>
+                    <p class="p-2 text-gray-400"> We have a professional team of builders on our crew ready to build your new garden walls or pillars we cover it all from brick, blocks, natural stone walls and pillars we cover it all.</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="lawns"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/grass.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5"> Grass Lawns</h3>
+                    <p class="p-2 text-gray-400"> Whether a new grass turf lawn to complement the new patio or driveway or a new artificial grass lawn we can handle it all call our team today to organise your free quote.</p>
+                </div>
+
+                <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block' >
+                    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="overhaul"></div>
+                    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/garden.png" width="60px" height="60px"/>  </div>
+                    <h3 class="relative mb-8 font-bold text-center top-5">Garden Overhauls</h3>
+                    <p class="p-2 text-gray-400"> We love turning grubby old gardens into something you'll be proud to show your neighbours. We are skilled and experienced in all areas, from raised beds, piers and walls to all types of paving.</p>
+                </div>
+            
+            </div>
+            <!-- <button class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See More </button> -->
         </div>
 
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="landscape"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/trowel.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Landscaping</h3>
-            <p class="p-2 text-gray-400"> Skilled in all aspects of landscaping, including paving, decking, carpentry, masonry and stone work, our dedicated craftsmen can handle any project. The complete green solution for urban, suburban and rural landscape design</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="patio"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/patiopn.png" width="65px" height="65px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Patio Installation</h3>
-            <p class="p-2 text-gray-400">A beautifully designed patio is a perfect complement to your home. Whatever the size or shape of your garden, our professional installers are able to create any appearance to suit different tastes, budgets and individual requirements.</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="driveway"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/drivway.png" width="65px" height="65px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Driveways</h3>
-            <p class="p-2 text-gray-400"> Our highly skilled team can install a high quality paved driveway for you and your family to enjoy for many years. We supply only the best stone for use on your new drive with many extra options....</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="plaster"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full scale-y-[-1]" src="images/trowel.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Plastering</h3>
-            <p class="p-2 text-gray-400">Our team can plaster/render or dash your new garden walls and piers to complement a new garden or match new walls to the finish on your house.</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="walls"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/wall.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Garden Walls/Pillars </h3>
-            <p class="p-2 text-gray-400"> We have a professional team of builders on our crew ready to build your new garden walls or pillars we cover it all from brick, blocks, natural stone walls and pillars we cover it all.</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="lawns"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/grass.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5"> Grass Lawns</h3>
-            <p class="p-2 text-gray-400"> Whether a new grass turf lawn to complement the new patio or driveway or a new artificial grass lawn we can handle it all call our team today to organise your free quote.</p>
-        </div>
-
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block' >
-            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="overhaul"></div>
-            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/garden.png" width="60px" height="60px"/>  </div>
-            <h3 class="relative mb-8 font-bold text-center top-5">Garden Overhauls</h3>
-            <p class="p-2 text-gray-400"> We love turning grubby old gardens into something you'll be proud to show your neighbours. We are skilled and experienced in all areas, from raised beds, piers and walls to all types of paving.</p>
-        </div>
-       
     </div>
-    <button class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See More </button>
-</div>
-
-
 
 
 
@@ -301,22 +262,24 @@
 
 <div class="mb-20 text-center outerwrapper">
     <div class="relative w-full mx-auto text-center border-solid galcontainer lg:inline-grid lg:px-20 lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer">
-    <img class="inline-block my-6 border-8 border-gray-300 " src="images/pavingfb.jpg" width="300px" height="300px" />
+
+        <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/concrete.jpeg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/imprinted1.jpeg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/centralbgimage.jpg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/pavingfb2.jpeg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/pavingfb3.jpeg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/tape.jpeg" width="300px" height="300px" />
     <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/concrete2.jpeg" width="300px" height="300px" />
-    <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/concrete.jpeg" width="300px" height="300px" />
+    <img class="inline-block my-6 border-8 border-gray-300 " src="images/pavingfb.jpg" width="300px" height="300px" />
+   
     </div>
 
-<button class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See More </button>
+<a href="./gallery.html" class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See All </a>
 </div>
 
 <!-- quality section -->
 
-<div class="w-full py-32 mb-20 text-center bg-green-800">
+<div class="w-full py-32 text-center bg-green-800">
 
     <div class="awards"> 
                 <h4 class="mb-8 text-5xl font-bold text-center text-green-100 ">Why Choose Us?</h4>
@@ -393,124 +356,135 @@
 </div>
 
     <!-- Testimonials -->
+<div id="testimonialswrap" class="mt-20">
+        <div id="leavesbg"> </div> 
+        
+            <img class="sideleafimg" src="images/niceleaf.png" />
+            <img class="biggerleaf" src="images/niceleaf.png" />
+         
+            <h2 class="mb-20 text-6xl text-center lg:text-8xl ">Testimonials</h2>
 
-    <h2 class="mb-20 text-6xl text-center lg:text-8xl ">Testimonials</h2>
+            <section class="z-0 flex flex-col justify-center w-full wrapper_carousel" role="region" aria-label="testimonial carousel">
+                <div class="relative flex items-center justify-center w-full mt-8 mb-8 overflow-hidden carousel-data">
+                    <div class="carousel-item" role="group" aria-label="slide 1 of 5">
+                        <div class="author-profile">
+                            <img  src="https://source.unsplash.com/random/?portrait,face/108x108">
+                            
+                            
+                        </div>
+                        <p class="my-8 italic text_caption">
+                            They arrived on and time finished my new driveway from start to finish in just 2 days. The workmanship is top quality and the price they quoted was very competitive compared to other companies. 
+        Some previous company’s quoted us saying that the price might increase during the job if something were to happen like if they hit pipes or cables while excavating the old driveway etc.</p>
 
-    <section class="z-0 flex flex-col justify-center w-full wrapper_carousel" role="region" aria-label="testimonial carousel">
-        <div class="relative flex items-center justify-center w-full mt-8 mb-8 overflow-hidden carousel-data">
-            <div class="carousel-item" role="group" aria-label="slide 1 of 5">
-                <div class="author-profile">
-                    <img  src="https://source.unsplash.com/random/?portrait,face/108x108">
+        <p class="italic text_caption">When Sean from Central Landscaping quoted us he was able to distinguish where all underground pipes and cables were located and quoted us 1 price that remained the same throughout the job.
+        Their price was way more competitive as they can allow for these misadventures where I found a lot other company’s seem to be charging the customer for their mistakes.</p>
+                        </p>
+                        <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                        <span class="mb-4 caption-author">
+                            - Daniel Boyle
+                        </span>
+                    </div>
+                    <div class="carousel-item" role="group" aria-label="slide 2 of 5">
+                        <div class="author-profile">
+                            <img src="https://source.unsplash.com/random/300×600/?model,portrait,face">
+                        </div>
+                        <p class="mt-8 italic text_caption">
+                            Fran and the team worked really well together, where on time, clean and efficient. Done an amazing job on my front drive, would definitely recommend them! 
+                        </p>
+                        <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                        <span class="mb-4 caption-author">
+                        - Patricia Nolan
+                        </span>
+                        
+                    </div>
+                    <div class="carousel-item" role="group" aria-label="slide 3 of 5">
+                        <div class="author-profile">
+                            <img src="https://source.unsplash.com/random/300×600/?woman,portrait,face">
+                        </div>
+                        <p class="my-8 italic text_caption">
+                            I highly recommended Sean and all the team at Central Landscaping they did my back garden. They arrived on time every morning and finished our garden within the time frame mentioned which was great as they had to come through the house. The work is 100% top quality and the price was real competitive plus the lads were great craic the 3 days they were here.
+                        </p>
+
+                        <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                        <span class="mb-4 caption-author">
+                            - Sinead O'Rourke
+                        </span>
                     
-                    
-                </div>
-                <p class="my-8 italic text_caption">
-                    They arrived on and time finished my new driveway from start to finish in just 2 days. The workmanship is top quality and the price they quoted was very competitive compared to other companies. 
-Some previous company’s quoted us saying that the price might increase during the job if something were to happen like if they hit pipes or cables while excavating the old driveway etc.</p>
+                    </div>
+                    <div class="carousel-item" role="group" aria-label="slide 4 of 5">
+                        <div class="author-profile">
+                            <img src="https://source.unsplash.com/random/300×600/?man,portrait,face">
+                        </div>
+                        <p class="my-8 italic text_caption">
+                            A great company to deal with started our driveway on Monday and finished on Wednesday couldn’t be any happier with the end result on our new driveway. Plus Sean is a gentleman.
 
-<p class="italic text_caption">When Sean from Central Landscaping quoted us he was able to distinguish where all underground pipes and cables were located and quoted us 1 price that remained the same throughout the job.
-Their price was way more competitive as they can allow for these misadventures where I found a lot other company’s seem to be charging the customer for their mistakes.</p>
-                </p>
-                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
-                <span class="mb-4 caption-author">
-                    - Daniel Boyle
-                </span>
-            </div>
-            <div class="carousel-item" role="group" aria-label="slide 2 of 5">
-                <div class="author-profile">
-                    <img src="https://source.unsplash.com/random/300×600/?model,portrait,face">
+                        </p>
+                        <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                        <span class="mb-4 caption-author">
+                            - Conor McDermott
+                        </span>
+                    </div>
+                    <div class="carousel-item" role="group" aria-label="slide 5 of 5">
+                        <div class="author-profile">
+                            <img src="https://source.unsplash.com/random/300×600/?teen,portrait,face">
+                        </div>
+                        <p class="my-8 italic text_caption">
+                            I definitely recommend Central Landscaping. We had our patio paving removed from our back garden and replaced it with the imprint concrete. 
+                            They arrived every morning on time, our floors and furniture were all covered up as we have no side access. They came through the house which was left spotlessly clean during and after they finished.
+                            We are delighted with the new garden they have created for us.
+                        </p>
+                        <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
+                        <span class="mb-4 caption-author">
+                            - Sinead 
+                        </span>
+                    </div>
                 </div>
-                <p class="mt-8 italic text_caption">
-                    Fran and the team worked really well together, where on time, clean and efficient. Done an amazing job on my front drive, would definitely recommend them! 
-                </p>
-                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
-                <span class="mb-4 caption-author">
-                   - Patricia Nolan
-                </span>
-                
-            </div>
-            <div class="carousel-item" role="group" aria-label="slide 3 of 5">
-                <div class="author-profile">
-                    <img src="https://source.unsplash.com/random/300×600/?woman,portrait,face">
+                <div class="flex items-center carousel-indicators">    
                 </div>
-                <p class="my-8 italic text_caption">
-                    I highly recommended Sean and all the team at Central Landscaping they did my back garden. They arrived on time every morning and finished our garden within the time frame mentioned which was great as they had to come through the house. The work is 100% top quality and the price was real competitive plus the lads were great craic the 3 days they were here.
-                </p>
+                <div class="flex justify-end mt-auto carousel-controls" aria-label="carousel controls">
+                    <button type="button" class="button_carousel-prev" aria-label="previous"><i class="fas fa-caret-left"></i></button>
+                    <button type="button" class="ml-1 button_carousel-next" aria-label="next"><i class="fas fa-caret-right"></i></button>
+                </div>
+                   
+            </section>
 
-                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
-                <span class="mb-4 caption-author">
-                    - Sinead O'Rourke
-                </span>
-               
-            </div>
-            <div class="carousel-item" role="group" aria-label="slide 4 of 5">
-                <div class="author-profile">
-                    <img src="https://source.unsplash.com/random/300×600/?man,portrait,face">
-                </div>
-                <p class="my-8 italic text_caption">
-                    A great company to deal with started our driveway on Monday and finished on Wednesday couldn’t be any happier with the end result on our new driveway. Plus Sean is a gentleman.
+            <hr class="w-2/4 mx-auto mb-20 border-green-100 border-solid border-1">
 
-                </p>
-                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
-                <span class="mb-4 caption-author">
-                    - Conor McDermott
-                </span>
-            </div>
-            <div class="carousel-item" role="group" aria-label="slide 5 of 5">
-                <div class="author-profile">
-                    <img src="https://source.unsplash.com/random/300×600/?teen,portrait,face">
-                </div>
-                <p class="my-8 italic text_caption">
-                    I definitely recommend Central Landscaping. We had our patio paving removed from our back garden and replaced it with the imprint concrete. 
-                    They arrived every morning on time, our floors and furniture were all covered up as we have no side access. They came through the house which was left spotlessly clean during and after they finished.
-                    We are delighted with the new garden they have created for us.
-                </p>
-                <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
-                <span class="mb-4 caption-author">
-                    - Sinead 
-                </span>
-            </div>
+            <!-- wrapup section -->
+        
+
+            
+
+
+
+                    <div class="w-full mb-20 text-center " id="guarantee">
+                    <img class="inline m-auto w-36 xl:w-64" src='./images/icons/facebookratings.svg' /> 
+
+                    <img class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
+                    </div>
+
+                    <div class="grid w-full shadedimage place-items-center">
+
+                    <div class="p-4 text-2xl font-bold text-white xl:text-4xl convinced">
+                        <p class="font-extrabold text-green-400">Still not convinced?</p>
+
+                        <p>We'd love to have a chat and go over anything you're not sure about!</p>
+                        <span class="text-green-400"><img class="inline pr-4" src="./images/icons/phone.svg"/>    087 333 1301   </span>
+                    </div>
+
+                    </div>
+
         </div>
-        <div class="flex items-center carousel-indicators">    
-        </div>
-        <div class="flex justify-end mt-auto carousel-controls" aria-label="carousel controls">
-            <button type="button" class="button_carousel-prev" aria-label="previous"><i class="fas fa-caret-left"></i></button>
-            <button type="button" class="ml-1 button_carousel-next" aria-label="next"><i class="fas fa-caret-right"></i></button>
-        </div>
-      </section>
-
-      <hr class="w-2/4 mx-auto mb-20 border-green-100 border-solid border-1">
-
-      <!-- wrapup section -->
-   
-
-      
-
       <script src="./carousel.js"></script>
 </body>
 
-<div class="w-full mb-20 text-center " id="guarantee">
-<img class="inline m-auto w-36 xl:w-64" src='./images/icons/facebookratings.svg' /> 
 
-<img class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
-</div>
-
-<div class="grid w-full shadedimage place-items-center">
-
-<div class="p-4 text-2xl font-bold text-white xl:text-4xl convinced">
-    <p class="font-extrabold text-green-400">Still not convinced?</p>
-
-    <p>We'd love to have a chat and go over anything you're not sure about!</p>
-    <span class="text-green-400"><img class="inline pr-4" src="./images/icons/phone.svg"/>    087 333 1301   </span>
-</div>
-
-</div>
 <div class="relative w-full top-2 outline mycont">
   
 <img class="w-full" src="./images/christmas-trees-bottomgreen.svg" height="300px" />
 </div>
 
-<div class="w-full pt-10 text-white myfooter">
+<div class="w-full pt-10 text-white bg-green-900 myfooter">
   
     <div class="px-10 pb-12 xl:px-40 lg:px-20 md:px-10 sm:px-5">
         <div class="flex flex-col justify-start w-full pt-12 space-y-2 sm:flex-row">
@@ -523,17 +497,17 @@ Their price was way more competitive as they can allow for these misadventures w
                 <span class="text-green-100 opacity-80">Lower Road, St.Edmundsbury, Lucan Village, Dublin</span>    
             </div>
             <div class="flex flex-col w-full space-y-4 sm:w-1/5">
-                <a class="opacity-60">About Us</a>
-                <a class="opacity-60">Services</a>
-                <a class="opacity-60">Gallery</a>
+                <a href="./about.html" class="opacity-60">About Us</a>
+                <a href="#services" class="opacity-60">Services</a>
+                <a href="./gallery.html" class="opacity-60">Gallery</a>
                 <a class="opacity-60">Contact</a>
-            </div>
-            <div class="flex flex-col w-full space-y-4 sm:w-1/5">
-                <a class="opacity-60">Disclaimer</a>
                 <a class="opacity-60">Testimonials</a>
-                <a class="opacity-60">Privacy Policy</a>
-                <a class="opacity-60">Terms of Service</a>
             </div>
+            <!-- <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                
+                <a class="opacity-60">Testimonials</a>
+                
+            </div> -->
             <div class="relative flex items-end w-full pt-6 mb-1 sm:w-1/5">
                 
                 <div class="flex flex-row space-x-4">

@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Landscaping</title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+    <link href="./lightbox2-2.11.3/dist/css/lightbox.css" rel="stylesheet" />    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Simonetta&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+      defer
+    ></script>
+   
+    <script src="https://use.fontawesome.com/4e3025a09e.js"></script>
+
+</head>
+<body>
+
+
+ <!-- navbar begins  -->
+
+ <nav
+ class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6 bg-green-900" id="mynavbar"
+ x-data="{ isOpen: false }"
+ @keydown.escape="isOpen = false"
+ :class="{ 'shadow-lg' : isOpen , '' : !isOpen}"
+>
+ <!--Logo-->
+ <div>
+  <a href="./index.html"><img src="images/pavinglogodarker.png" width='220px'  /></a>
+ </div>
+
+ <!--Toggle button (hidden on large screens)-->
+ <button
+   @click="isOpen = !isOpen"
+   type="button"
+   class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+   :class="{ 'transition transform-180': isOpen }"
+ >
+   <svg
+     class="w-6 h-6 fill-current"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+   >
+     <path
+       x-show="isOpen"
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+     />
+     <path
+       x-show="!isOpen"
+       fill-rule="evenodd"
+       d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+     />
+   </svg>
+ </button>
+
+ <!--Menu-->
+ <div
+   class="flex-grow w-full lg:flex lg:items-center lg:w-auto"
+   :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+   @click.away="isOpen = false"
+   x-show.transition="true"
+ >
+   <ul
+     class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex"
+   >
+
+   <li class="mr-3">
+     <a
+       class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+       href="#"
+       @click="isOpen = false"
+       > <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 </a>
+       
+       <a
+       class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+       href="#"
+       @click="isOpen = false"
+       > 
+       <img class="inline w-10 p-2" src="./images/officephone.png"/> 01 901 0310 </a>
+     
+   </li>
+
+
+     <li class="mr-3">
+       <a
+         class="inline-block px-4 py-2 text-green-100 no-underline"
+         href="./index.html"
+         @click="isOpen = false"
+         >Home
+       </a>
+     </li>
+     <li class="mr-3">
+       <a
+         class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+         href="./about.html"
+         @click="isOpen = false"
+         >About
+       </a>
+     </li>
+     <li class="mr-3">
+       <a
+         class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+         href="#services"
+         @click="isOpen = false"
+         >Services
+       </a>
+     </li>
+     <li class="mr-3">
+         <a
+           class="inline-block px-4 py-2 font-bold text-white no-underline hover:text-white hover:text-underline"
+           href="#gallery"
+           @click="isOpen = false"
+           >Gallery
+         </a>
+       </li>
+     <li class="mr-3">
+       <a
+         class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+         href="#contact"
+         @click="isOpen = false"
+         >Contact
+       </a>
+     </li>
+   </ul>
+ </div>
+</nav>
+
+<!--Container for content-->
+<div class="container mx-auto mt-24 bg-white shadow-lg md:mt-18"></div>
+
+
+<!-- navbar ends -->
+
+
+
+
+
+<section class="mt-20 ">
+
+<h1 class="text-6xl text-center mt-52 lg:text-8xl " id="gallery">Gallery</h2>
+    <p class="text-center text-gray-400 text-opacity-70">( Click to Zoom In! )</p>
+
+
+    <h2 class="mt-20 text-4xl text-center lg:text-5xl " id="gallery">Imprinted Concrete </h2> 
+    <div class="text-center mx=auto mt-20 firstrow">  
+
+      
+     <a href="./images/landscape/concrete.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/concrete.jpeg"  />
+ </a>
+
+ <a href="./images/landscape/concrete2.jpeg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/concrete2.jpeg"  />
+</a>
+
+
+
+     <a href="./images/imprinted1.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/imprinted1.jpeg"  />
+ </a>
+
+ <a href="./images/landscape/tape.jpeg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/tape.jpeg"  />
+</a>
+       
+<a href="./images/landscape/conc1.jpg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/conc1.jpg"  />
+</a>
+
+<a href="./images/landscape/conc2.jpg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/conc2.jpg"  />
+</a>
+
+<a href="./images/landscape/conc3.jpg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/conc3.jpg"  />
+</a>
+
+<a href="./images/landscape/conc4.jpg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/conc4.jpg"  />
+</a>
+
+<a href="./images/landscape/conc5.jpg" data-lightbox="Paving">
+    <img class="galthumb" src="./images/landscape/conc5.jpg"  />
+</a>
+
+
+
+
+      </div>  
+
+    <h2 class="mt-20 text-4xl text-center lg:text-5xl " id="gallery">Paving / Patios / Artificial Grass</h2> 
+    <div class="mt-20 text-center firstrow">
+    <a href="./images/pavingfb.jpg" data-lightbox="Paving">
+           <img class="galthumb" src="./images/pavingfb.jpg"  />
+    </a>
+
+
+    <a href="./images/landscape/pavingfb2.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/pavingfb2.jpeg" />
+    </a>
+
+
+    <a href="./images/landscape/pavingfb3.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/pavingfb3.jpeg" />
+    </a>
+
+    <a href="./images/landscape/paving4.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving4.jpeg" />
+    </a>
+
+    <a href="./images/landscape/landscape1.jpeg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/landscape1.jpeg" />
+    </a>
+
+    <a href="./images/landscape/paving10.jpg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving10.jpg" />
+    </a>
+
+    <a href="./images/landscape/paving6.jpg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving6.jpg" />
+    </a>
+
+    <a href="./images/landscape/paving7.jpg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving7.jpg" />
+    </a>
+
+    <a href="./images/landscape/paving8.jpg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving8.jpg" />
+    </a>
+
+    <a href="./images/landscape/paving9.jpg" data-lightbox="Paving">
+        <img class="galthumb" src="./images/landscape/paving9.jpg" />
+    </a>
+
+    <a href="./images/landscape/landscapevert.jpeg" data-lightbox="patios">
+        <img class="galthumb" src="./images/landscape/landscapevert.jpeg"  />
+ </a>
+
+</div>
+
+
+
+<h2 class="mt-20 text-4xl text-center lg:text-5xl " id="gallery">Driveways</h2> 
+<div class="text-center mx=auto mt-20 firstrow">
+
+
+    <a href="./images/landscape/pats1.jpg" data-lightbox="patios">
+           <img class="galthumb" src="./images/landscape/pats1.jpg"  />
+    </a>
+
+    <a href="./images/landscape/pats2.jpg" data-lightbox="patios">
+        <img class="galthumb" src="./images/landscape/pats2.jpg"  />
+    </a>
+
+ <a href="./images/landscape/pats3.jpg" data-lightbox="patios">
+        <img class="galthumb" src="./images/landscape/pats3.jpg"  />
+    </a>
+    <a href="./images/landscape/pats4.jpg" data-lightbox="patios">
+        <img class="galthumb" src="./images/landscape/pats4.jpg"  />
+    </a>
+    <a href="./images/landscape/pas5.jpg" data-lightbox="patios">
+        <img class="galthumb" src="./images/landscape/pas5.jpg"  />
+    </a>
+</div>
+
+<h2 class="mt-20 text-4xl text-center lg:text-5xl " id="gallery">Walls & Piers </h2> 
+    <div class="text-center mx=auto mt-20 firstrow">
+
+        <a href="./images/landscape/wall1.JPG" data-lightbox="patios">
+            <img class="galthumb" src="./images/landscape/wall1.JPG"  />
+     </a>
+    
+        <a href="./images/landscape/wall2.jpg" data-lightbox="patios">
+               <img class="galthumb" src="./images/landscape/wall2.JPG"  />
+        </a>
+    
+        <a href="./images/landscape/wall3.JPG" data-lightbox="patios">
+            <img class="galthumb" src="./images/landscape/wall3.JPG"  />
+        </a>
+
+        <a href="./images/landscape/wallsmall.jpeg" data-lightbox="patios">
+            <img class="galthumb" src="./images/landscape/wallsmall.jpeg"  />
+        </a>
+
+
+
+     </div>
+
+
+
+</section>
+
+    <script src="./lightbox2-2.11.3/dist/js/lightbox-plus-jquery.js"></script>
+    <script> 
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true
+    })
+    </script>
+</body>
+
+</html>      

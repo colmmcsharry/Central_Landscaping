@@ -807,15 +807,6 @@ video {
 .resize-none {
 	resize: none;
 }
-.resize-y {
-	resize: vertical;
-}
-.resize-x {
-	resize: horizontal;
-}
-.resize {
-	resize: both;
-}
 .appearance-none {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
@@ -902,10 +893,6 @@ video {
 	--tw-border-opacity: 1;
 	border-color: rgba(209, 250, 229, var(--tw-border-opacity));
 }
-.border-red-500 {
-	--tw-border-opacity: 1;
-	border-color: rgba(239, 68, 68, var(--tw-border-opacity));
-}
 .border-gray-200 {
 	--tw-border-opacity: 1;
 	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
@@ -950,6 +937,9 @@ video {
 .p-4 {
 	padding: 1rem;
 }
+.p-8 {
+	padding: 2rem;
+}
 .px-2 {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
@@ -981,6 +971,10 @@ video {
 .py-32 {
 	padding-top: 8rem;
 	padding-bottom: 8rem;
+}
+.px-8 {
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 .pt-6 {
 	padding-top: 1.5rem;
@@ -1039,6 +1033,14 @@ video {
 	font-size: 1.5rem;
 	line-height: 2rem;
 }
+.text-sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+.text-base {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
 .font-bold {
 	font-weight: 700;
 }
@@ -1081,10 +1083,6 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
-.text-gray-600 {
-	--tw-text-opacity: 1;
-	color: rgba(75, 85, 99, var(--tw-text-opacity));
-}
 .text-gray-400 {
 	--tw-text-opacity: 1;
 	color: rgba(156, 163, 175, var(--tw-text-opacity));
@@ -1113,6 +1111,9 @@ video {
 .opacity-60 {
 	opacity: 0.6;
 }
+.opacity-100 {
+	opacity: 1;
+}
 .shadow-lg {
 	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1120,6 +1121,10 @@ video {
 .shadow {
 	--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline-white {
+	outline: 2px dotted white;
+	outline-offset: 2px;
 }
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -1201,6 +1206,36 @@ height:200px;
 }
 
 
+#contactbg{
+ width:100vw;
+  height:100%;
+  background-image:url('./images/fallingleaves.png');
+  background-size:cover;
+  background-repeat:repeat;
+/* background-position: center 50px; */
+  opacity:0.1;
+  left:0;
+  top:-2;
+position:absolute;
+}
+
+#contactbg2{
+  width:100vw;
+   height:100%;
+   background-image:url('./images/fallingleaves.png');
+   background-size:cover;
+   background-repeat:repeat;
+ background-position: center 50px;
+   opacity:0.1;
+   left:0;
+   bottom:-600px;
+ position:absolute;
+ }
+
+ #contact-form {
+background-color:white;
+   z-index:10;
+ }
 
 
 #leavesbg {
@@ -1810,6 +1845,11 @@ blockquote {
 	.lg\:text-5xl {
 		font-size: 3rem;
 		line-height: 1;
+	}
+
+	.lg\:text-base {
+		font-size: 1rem;
+		line-height: 1.5rem;
 	}
 }
   

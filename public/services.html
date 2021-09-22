@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Landscaping</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Simonetta&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+      defer
+    ></script>
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+  
+    <!-- needs to be container so the gradient doesn't affect children text -->
+
+
+
+            <!-- navbar begins  -->
+
+            <nav
+            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6 bg-green-900" id="mynavbar"
+            x-data="{ isOpen: false }"
+            @keydown.escape="isOpen = false"
+            :class="{ 'shadow-lg' : isOpen , '' : !isOpen}"
+          >
+            <!--Logo-->
+            <div>
+             <a href="./index.html"><img src="images/pavinglogodarker.png" width='220px'  /></a>
+            </div>
+      
+            <!--Toggle button (hidden on large screens)-->
+            <button
+              @click="isOpen = !isOpen"
+              type="button"
+              class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+              :class="{ 'transition transform-180': isOpen }"
+            >
+              <svg
+                class="w-6 h-6 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  x-show="isOpen"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+                <path
+                  x-show="!isOpen"
+                  fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                />
+              </svg>
+            </button>
+      
+            <!--Menu-->
+            <div
+              class="flex-grow w-full lg:flex lg:items-center lg:w-auto"
+              :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+              @click.away="isOpen = false"
+              x-show.transition="true"
+            >
+              <ul
+                class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex"
+              >
+
+              <li class="mr-3">
+                <a
+                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                  href="#"
+                  @click="isOpen = false"
+                  > <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 </a>
+                  
+                  <a
+                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                  href="#"
+                  @click="isOpen = false"
+                  > 
+                  <img class="inline w-10 p-2" src="./images/officephone.png"/> 01 901 0310 </a>
+                
+              </li>
+
+
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 font-bold text-green-100 no-underline"
+                    href="./index.html"
+                    @click="isOpen = false"
+                    >Home
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="./about.html"
+                    @click="isOpen = false"
+                    >About
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 font-bold text-white no-underline hover:text-white hover:text-underline"
+                    href="./services.html"
+                    @click="isOpen = false"
+                    >Services
+                  </a>
+                </li>
+                <li class="mr-3">
+                    <a
+                      class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                      href="./gallery.html"
+                      @click="isOpen = false"
+                      >Gallery
+                    </a>
+                  </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    href="./contact.html"
+                    @click="isOpen = false"
+                    >Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+          <!--Container for content-->
+          <div class="mx-auto mt-24 bg-white shadow-lg md:mt-18"></div>
+
+
+          <!-- navbar ends -->
+
+
+
+
+
+
+
+
+
+
+<div class="mt-20 pt-28 servwrapper">
+
+    <h2 class="mb-10 text-6xl text-center lg:text-8xl" id="services">Services</h2>
+
+<div class="text-center outerwrapper">
+    <div class="relative w-full mx-auto text-center border-solid lg:inline-grid lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer ">
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/concrete.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Concrete Imprinting</h3>
+            <p class="p-2 text-gray-400"> Offering the most comprehensive range of imprinted concrete services throughout Dublin and surrounding areas, you are guaranteed to find just what you’re looking for with our exclusive range of patterns and colours.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="landscape"></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/trowel.png" width="60px" height="60px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Landscaping</h3>
+            <p class="p-2 text-gray-400"> Skilled in all aspects of landscaping, including paving, decking, carpentry, masonry and stone work, our dedicated craftsmen can handle any project. The complete green solution for urban, suburban and rural landscape design</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="patio"></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/patiopn.png" width="65px" height="65px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Patio Installation</h3>
+            <p class="p-2 text-gray-400">A beautifully designed patio is a perfect complement to your home. Whatever the size or shape of your garden, our professional installers are able to create any appearance to suit different tastes, budgets and individual requirements.</p>
+        </div>
+
+        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+            <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="driveway"></div>
+            <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/drivway.png" width="65px" height="65px"/>  </div>
+            <h3 class="relative mb-8 font-bold text-center top-5">Driveways</h3>
+            <p class="p-2 text-gray-400"> Our highly skilled team can install a high quality paved driveway for you and your family to enjoy for many years. We supply only the best stone for use on your new drive with many extra options....</p>
+        </div>
+
+<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="plaster"></div>
+    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full scale-y-[-1]" src="images/trowel.png" width="60px" height="60px"/>  </div>
+    <h3 class="relative mb-8 font-bold text-center top-5">Plastering</h3>
+    <p class="p-2 text-gray-400">Our team can plaster/render or dash your new garden walls and piers to complement a new garden or match new walls to the finish on your house.</p>
+</div>
+
+<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="walls"></div>
+    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/wall.png" width="60px" height="60px"/>  </div>
+    <h3 class="relative mb-8 font-bold text-center top-5">Garden Walls/Pillars </h3>
+    <p class="p-2 text-gray-400"> We have a professional team of builders on our crew ready to build your new garden walls or pillars we cover it all from brick, blocks, natural stone walls and pillars we cover it all.</p>
+</div>
+
+<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="lawns"></div>
+    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/grass.png" width="60px" height="60px"/>  </div>
+    <h3 class="relative mb-8 font-bold text-center top-5"> Grass Lawns</h3>
+    <p class="p-2 text-gray-400"> Whether a new grass turf lawn to complement the new patio or driveway or a new artificial grass lawn we can handle it all call our team today to organise your free quote.</p>
+</div>
+
+<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block' >
+    <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="overhaul"></div>
+    <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/garden.png" width="60px" height="60px"/>  </div>
+    <h3 class="relative mb-8 font-bold text-center top-5">Garden Overhauls</h3>
+    <p class="p-2 text-gray-400"> We love turning grubby old gardens into something you'll be proud to show your neighbours. We are skilled and experienced in all areas, from raised beds, piers and walls to all types of paving.</p>
+</div>
+
+</div>
+
+</body>
+
+<div class="relative w-full top-2 outline mycont">
+  
+    <img class="w-full" src="./images/christmas-trees-bottomgreen.svg" height="300px" />
+    </div>
+    
+    <div class="w-full pt-10 text-white myfooter">
+      
+        <div class="px-10 pb-12 xl:px-40 lg:px-20 md:px-10 sm:px-5">
+            <div class="flex flex-col justify-start w-full pt-12 space-y-2 sm:flex-row">
+                
+                <div class="flex flex-col w-full pr-6 space-y-4 sm:w-2/5">
+                    
+                    <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/mobphone.png"/>   087 333 1301  </span> 
+                    <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/officephone.png"/>    01 901 0310   </span> 
+                    <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/icons/envelope.svg"/> salescentrallandscaping@gmail.com  </span>    
+                    <span class="text-green-100 opacity-80">Lower Road, St.Edmundsbury, Lucan Village, Dublin</span>    
+                </div>
+                <div class="flex flex-col w-full space-y-4 sm:w-1/5">
+                    <a class="opacity-60">About Us</a>
+                    <a class="opacity-60">Services</a>
+                    <a class="opacity-60">Gallery</a>
+                    <a class="opacity-60">Contact</a>
+                </div>
+                
+                <div class="relative flex items-end w-full pt-6 mb-1 sm:w-1/5">
+                    
+                    <div class="flex flex-row space-x-4">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-2 opacity-60" id="contact">
+                <p class="text-xs">© 2021 Central Landscaping</p>
+            </div>
+        </div>
+    </div>
+
+</html>

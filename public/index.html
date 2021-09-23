@@ -84,17 +84,17 @@
 
               <li class="mr-3">
                 <a
-                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
-                  href="#"
-                  @click="isOpen = false"
-                  > <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 </a>
-                  
-                  <a
-                  class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
-                  href="#"
-                  @click="isOpen = false"
-                  > 
-                  <img class="inline w-10 p-2" src="./images/officephone.png"/> 01 901 0310 </a>
+                class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                href="tel:0873331301"
+                @click="isOpen = false"
+                > <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 </a>
+                
+                <a
+                class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                href="tel:019010310"
+                @click="isOpen = false"
+                > 
+                <img class="inline w-10 p-2" src="./images/officephone.png"/> 01 901 0310 </a>
                 
               </li>
 
@@ -109,7 +109,7 @@
                 </li>
                 <li class="mr-3">
                   <a
-                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                     href="./about.html"
                     @click="isOpen = false"
                     >About
@@ -117,7 +117,7 @@
                 </li>
                 <li class="mr-3">
                   <a
-                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                     href="./services.html"
                     @click="isOpen = false"
                     >Services
@@ -125,7 +125,7 @@
                 </li>
                 <li class="mr-3">
                     <a
-                      class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                      class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                       href="./gallery.html"
                       @click="isOpen = false"
                       >Gallery
@@ -133,7 +133,7 @@
                   </li>
                 <li class="mr-3">
                   <a
-                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                    class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                     href="./contact.html"
                     @click="isOpen = false"
                     >Contact
@@ -153,7 +153,7 @@
 
 
         <div class="relative ml-8 xl:ml-32 top-36 lg:top-24">
-          <h1 class="relative mb-8 text-3xl text-green-400 lg:text-8xl heroheading ">Dublin's Best for</h1>
+          <h1 class="relative mb-8 text-3xl lg:text-8xl heroheading ">Dublin's <span class="text-yellow-50 ">Best for</span></h1>
             <ul class="relative mb-8">
               <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Patios</li>
               <li class="relative mb-4 text-3xl text-white lg:text-5xl">- Driveways</li>
@@ -163,7 +163,7 @@
              
             </ul>
 
-             <a id="ctabutton" href="./contact.html" class="relative px-10 py-2 font-sans text-3xl font-bold text-gray-900 bg-green-400 rounded-full hover:bg-green-100 cta"> Get in Touch </a>
+             <a id="ctabutton" href="./contact.html" class="relative px-10 py-2 font-sans text-2xl font-bold text-white border-4 border-yellow-50 lg:text-3xl cta"> Get in Touch </a>
            
         </div>
 
@@ -220,7 +220,7 @@
         
             
             </div>
-            <a href="./services.html" class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See All Services</a>
+            <a href="./services.html" class="relative px-5 py-2 mx-auto font-bold text-white rounded-full bg-lightgreen cta"> See All Services</a>
         </div>
 
     </div>
@@ -235,23 +235,25 @@
 <div class="mb-20 text-center outerwrapper">
     <div class="relative w-full mx-auto mb-8 text-center border-solid galcontainer lg:inline-grid lg:px-20 lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer">
 
-        <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/concrete.jpeg" width="300px" height="300px" />
-    <img class="inline-block my-6 border-8 border-gray-300 " src="images/imprinted1.jpeg" width="300px" height="300px" />
-    <img class="inline-block my-6 border-8 border-gray-300 " src="images/centralbgimage.jpg" width="300px" height="300px" />
-    <img class="inline-block my-6 border-8 border-gray-300 " src="images/landscape/pavingfb2.jpeg" width="300px" height="300px" />
+        <img class="inline-block my-6 border-4 border-gray-200 homegal " src="images/landscape/concrete.jpeg" width="300px" height="300px" />
+    <img class="inline-block my-6 border-4 border-gray-200 homegal " src="images/imprinted1.jpeg" width="300px" height="300px" />
+    <img class="inline-block my-6 border-4 border-gray-200 homegal " src="images/centralbgimage.jpg" width="300px" height="300px" />
+    <img class="inline-block my-6 border-4 homegal " src="images/landscape/pavingfb2.jpeg" width="300px" height="300px" />
     
    
     </div>
 
-<a href="./gallery.html" class="relative px-5 py-2 mx-auto font-bold text-gray-900 bg-green-400 rounded-full cta"> See All </a>
+<a href="./gallery.html" class="relative px-5 py-2 mx-auto font-bold text-white rounded-full bg-lightgreen cta"> See All </a>
 </div>
 
 <!-- quality section -->
 
-<div class="w-full py-32 text-center bg-green-800">
+<div class="w-full text-center py-28 bg-darkgreen">
+
+
 
     <div class="awards"> 
-                <h4 class="mb-8 text-5xl font-bold text-center text-green-100 ">Why Choose Us?</h4>
+                <h4 class="mb-16 text-6xl font-bold text-center text-lightgreen ">Why <span class="text-yellow-50 ">Choose Us?</span></h4>
 
                 <div class="inline-block w-32 p-2 mx-auto mb-4 font-bold text-center text-white ">
                 <img class="mx-auto mb-2" src="images/icons/thumbsup.png" width="70px" height="70px"/>
@@ -275,7 +277,7 @@
 
 
             <div class="mt-10 imprinting">
-                <h4 class="mb-8 text-3xl font-bold text-center text-green-100 ">Our Concrete Imprinting</h4>
+                <h4 class="mb-8 text-5xl font-bold text-center text-lightgreen ">Our <span class="text-yellow-50 ">Concrete Imprinting</span> </h4>
 
                 <div class="grid grid-cols-1 justify-content-start xl:grid-cols-3">
                     <span class="inline w-auto p-2 mb-4 font-bold text-center text-white ">
@@ -309,7 +311,7 @@
             </div>
 
             <div class="mt-10 imprinting">
-                <h4 class="px-4 mb-4 text-2xl font-bold text-center text-green-200 ">Variety of Patterns and Colours to Choose From</h4>
+                <h4 class="px-4 mb-4 text-4xl font-bold text-center text-lightgreen "> Variety of <span class="text-yellow-50 ">Patterns</span> and <span class="text-yellow-50 ">Colours</span> to Choose From</h4>
                 <img class="block inline-block mx-auto" src="images/icons/pattern1.png" width="120px" height="110px"/>
                 <img class="block inline-block mx-auto" src="images/icons/pattern2.png" width="120px" height="110px"/>
                 <img class="block inline-block mx-auto" src="images/icons/pattern3.png" width="120px" height="110px"/>
@@ -325,8 +327,14 @@
 </div>
 
     <!-- Testimonials -->
-<div id="testimonialswrap" class="mt-20">
-        <div id="leavesbg"> </div> 
+<div id="testimonialswrap" class="relative mt-20">
+        <!-- <div id="leavesbg"> </div>  -->
+        <img src="images/leaf.png" width="250px" height="250px" class= "absolute leaf top-32 opacity-40 -rotate-6 left-10" />
+        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf top-1/4 opacity-60 right-20" />
+        <img src="images/leaf.png" width="250px" height="250px" class="absolute leaf -rotate-12 opacity-70 bottom-2/4 left-10" />
+        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-180 leaf top-52 right-10" />
+        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf -left-32 top-1/2" />
+        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf -right-32 top-1/2" />
         
             <img class="sideleafimg" src="images/niceleaf.png" />
             <img class="biggerleaf" src="images/niceleaf.png" />
@@ -341,11 +349,11 @@
                             
                             
                         </div>
-                        <p class="my-8 italic text_caption">
+                        <p class="z-10 p-1 my-8 italic bg-white text_caption">
                             They arrived on and time finished my new driveway from start to finish in just 2 days. The workmanship is top quality and the price they quoted was very competitive compared to other companies. 
         Some previous company’s quoted us saying that the price might increase during the job if something were to happen like if they hit pipes or cables while excavating the old driveway etc.</p>
 
-        <p class="italic text_caption">When Sean from Central Landscaping quoted us he was able to distinguish where all underground pipes and cables were located and quoted us 1 price that remained the same throughout the job.
+        <p class="z-10 p-1 italic text_caption">When Sean from Central Landscaping quoted us he was able to distinguish where all underground pipes and cables were located and quoted us 1 price that remained the same throughout the job.
         Their price was way more competitive as they can allow for these misadventures where I found a lot other company’s seem to be charging the customer for their mistakes.</p>
                         </p>
                         <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
@@ -435,10 +443,11 @@
                     <div class="grid w-full shadedimage place-items-center">
 
                     <div class="p-4 text-2xl font-bold text-white xl:text-4xl convinced">
-                        <p class="font-extrabold text-green-400">Still not convinced?</p>
+                        <p class="font-extrabold text-lightgreen">Still not convinced?</p>
 
                         <p>We'd love to have a chat and go over anything you're not sure about!</p>
-                        <span class="text-green-400"><img class="inline pr-4" src="./images/icons/phone.svg"/>    087 333 1301   </span>
+                       <a class="block mb-6" href="tel:0873331301"><span class="text-lightgreen"><img class="inline pb-2 pr-4" src="./images/greenphone.svg"/>   087 333 1301   </span></a> 
+                       <a class="block my-2" href="tel:019010310"><span class="text-lightgreen"><img class="inline pb-2 pr-4" src="./images/officephone.png"/>    01 901 0310   </span></a> 
                     </div>
 
                     </div>
@@ -461,9 +470,9 @@
             
             <div class="flex flex-col w-full pr-6 space-y-4 sm:w-2/5">
                 
-                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/mobphone.png"/>   087 333 1301  </span> 
-                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/officephone.png"/>    01 901 0310   </span> 
-                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/icons/envelope.svg"/> salescentrallandscaping@gmail.com  </span>    
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/mobphone.png"/><a href="tel:0873331301">  087 333 1301 </a>   </span> 
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/officephone.png"/><a href="tel:019010310">   01 901 0310 </a>    </span> 
+                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/envelopegreen.png"/> salescentrallandscaping@gmail.com  </span>    
                 <span class="text-green-100 opacity-80">Lower Road, St.Edmundsbury, Lucan Village, Dublin</span>    
             </div>
             <div class="flex flex-col w-full space-y-4 sm:w-1/5">
@@ -482,10 +491,9 @@
             <div class="relative flex items-end w-full pt-6 mb-1 sm:w-1/5">
                 
                 <div class="flex flex-row space-x-4">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-google"></i>
+                  <a target="_blank"  href="https://www.facebook.com/centralscape/"><i class="fab fa-facebook-f"></i></a>  
+                  <a target="_blank" href="https://www.instagram.com/central_landscaping_dublin/"> <i class="fab fa-instagram"></i></a> 
+                  <a target="_blank" href="https://www.google.com/search?hl=en-IE&gl=ie&q=Central+Landscaping+And+Paving+-+Patio+Paving+-+Dublin+paving+contractor&ludocid=8666334844596006084&lsig=AB86z5VnHKtZf_mlCSCHfsFyhL26#lrd=0x486773cb28cdc807:0x7845019ffcbc2cc4,1"> <i class="fab fa-google"></i></a> 
                 </div>
             </div>
         </div>

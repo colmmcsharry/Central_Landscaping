@@ -5,7 +5,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+      "lightgreen":"var(--lightgreen)",
+      "darkgreen":"var(--darkgreen)",
+      },
+    },
   },
   variants: {
     extend: {},

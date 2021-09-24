@@ -637,9 +637,6 @@ video {
 .top-2 {
 	top: 0.5rem;
 }
-.top-36 {
-	top: 9rem;
-}
 .top-20 {
 	top: 5rem;
 }
@@ -745,8 +742,8 @@ video {
 .mb-3 {
 	margin-bottom: 0.75rem;
 }
-.ml-8 {
-	margin-left: 2rem;
+.ml-2 {
+	margin-left: 0.5rem;
 }
 .mb-8 {
 	margin-bottom: 2rem;
@@ -1089,6 +1086,10 @@ video {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 }
+.text-5xl {
+	font-size: 3rem;
+	line-height: 1;
+}
 .text-3xl {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
@@ -1366,6 +1367,30 @@ background-size:cover;
   height:200px;
 }
 
+#allherocontent {
+  top:20%;
+}
+
+@media screen and (max-width:450px){
+  .grassdivider {height:150px;}
+  #allherocontent {
+    transform:scale(.90);
+  }
+
+}
+
+@media screen and (max-width:350px){
+  #allherocontent {
+    transform:scale(.70);
+  }
+
+  .grassdivider {height:120px;}
+
+}
+
+
+
+
 @media screen and (min-width:480px){
  .grassdivider {
    bottom:-50px;
@@ -1571,10 +1596,16 @@ blockquote {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height:800px;
+    height:500px;
 }
 @media screen and (min-width:450px){
   .shadedimage {background-attachment:fixed
+  }
+}
+
+@media screen and (max-width:450px){
+  .shadedimage {
+    height:400px
   }
 }
 
@@ -1669,6 +1700,9 @@ blockquote {
     }
   }
   
+  .footercontact {
+    margin-bottom:18px;
+  }
   
   .author-profile {
     width: 108px;
@@ -1865,6 +1899,10 @@ blockquote {
 		margin-bottom: 0px;
 	}
 
+	.md\:ml-32 {
+		margin-left: 8rem;
+	}
+
 	.md\:flex {
 		display: flex;
 	}
@@ -1892,10 +1930,6 @@ blockquote {
 }
   
   @media (min-width: 1024px) {
-
-	.lg\:top-24 {
-		top: 6rem;
-	}
 
 	.lg\:inline-block {
 		display: inline-block;
@@ -1960,10 +1994,6 @@ blockquote {
 }
   
   @media (min-width: 1280px) {
-
-	.xl\:ml-32 {
-		margin-left: 8rem;
-	}
 
 	.xl\:w-64 {
 		width: 16rem;

@@ -182,6 +182,30 @@ background-size:cover;
   height:200px;
 }
 
+#allherocontent {
+  top:20%;
+}
+
+@media screen and (max-width:450px){
+  .grassdivider {height:150px;}
+  #allherocontent {
+    transform:scale(.90);
+  }
+
+}
+
+@media screen and (max-width:350px){
+  #allherocontent {
+    transform:scale(.70);
+  }
+
+  .grassdivider {height:120px;}
+
+}
+
+
+
+
 @media screen and (min-width:480px){
  .grassdivider {
    bottom:-50px;
@@ -387,10 +411,16 @@ blockquote {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height:800px;
+    height:500px;
 }
 @media screen and (min-width:450px){
   .shadedimage {background-attachment:fixed
+  }
+}
+
+@media screen and (max-width:450px){
+  .shadedimage {
+    height:400px
   }
 }
 
@@ -485,6 +515,9 @@ blockquote {
     }
   }
   
+  .footercontact {
+    margin-bottom:18px;
+  }
   
   .author-profile {
     width: 108px;

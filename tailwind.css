@@ -188,15 +188,11 @@ background-size:cover;
 
 @media screen and (max-width:450px){
   .grassdivider {height:150px;}
-  #allherocontent {
-    transform:scale(.90);
-  }
-
 }
 
 @media screen and (max-width:350px){
   #allherocontent {
-    transform:scale(.70);
+    transform:scale(.90);
   }
 
   .grassdivider {height:120px;}

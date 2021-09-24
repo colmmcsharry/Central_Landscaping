@@ -196,7 +196,6 @@ background-size:cover;
   }
 
   .grassdivider {height:120px;}
-
 }
 
 
@@ -207,6 +206,10 @@ background-size:cover;
    bottom:-50px;
  background-image:url('./images/image.png')
  }
+
+ #allherocontent {
+  top:15%;
+}
 }
 
 

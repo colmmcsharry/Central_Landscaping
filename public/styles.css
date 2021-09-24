@@ -702,6 +702,10 @@ video {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
+.my-4 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
 .mr-3 {
 	margin-right: 0.75rem;
 }
@@ -761,6 +765,9 @@ video {
 }
 .ml-1 {
 	margin-left: 0.25rem;
+}
+.mt-4 {
+	margin-top: 1rem;
 }
 .block {
 	display: block;
@@ -1089,10 +1096,6 @@ video {
 .text-2xl {
 	font-size: 1.5rem;
 	line-height: 2rem;
-}
-.text-5xl {
-	font-size: 3rem;
-	line-height: 1;
 }
 .font-bold {
 	font-weight: 700;

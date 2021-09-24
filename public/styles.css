@@ -1376,6 +1376,11 @@ background-size:cover;
 
 @media screen and (max-width:450px){
   .grassdivider {height:150px;}
+
+  .bottomservmob{
+    margin-bottom:60px;
+  }
+
 }
 
 @media screen and (max-width:350px){
@@ -1991,16 +1996,6 @@ blockquote {
 
 	.lg\:text-5xl {
 		font-size: 3rem;
-		line-height: 1;
-	}
-
-	.lg\:text-9xl {
-		font-size: 8rem;
-		line-height: 1;
-	}
-
-	.lg\:text-6xl {
-		font-size: 3.75rem;
 		line-height: 1;
 	}
 

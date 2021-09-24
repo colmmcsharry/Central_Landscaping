@@ -188,6 +188,11 @@ background-size:cover;
 
 @media screen and (max-width:450px){
   .grassdivider {height:150px;}
+
+  .bottomservmob{
+    margin-bottom:60px;
+  }
+
 }
 
 @media screen and (max-width:350px){

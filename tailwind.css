@@ -49,6 +49,21 @@ h1,h2, h3, li, h4 {
   position:relative;
 }
 
+.thumbnail {position:absolute;
+width:100%;
+height:100%;
+z-index:-10;
+overflow:hidden;
+top:0;
+left:0;
+border:2px solid red;}
+
+.footerlogo {
+  border:2px solid red;
+  z-index:30;
+}
+
+
 @media screen and (min-width:1200px){
 
   .homegal {
@@ -237,7 +252,9 @@ background-size:cover;
 #ctabutton {
   border-radius: 20px 0px 20px 0px;
   border-style: solid;
-  background-color: var(--lightgreen)
+  background-color: var(--lightgreen);
+  text-shadow: 2px 2px rgb(83, 100, 85)
+  
 }
 
 
@@ -356,8 +373,6 @@ blockquote {
 
 
 
-
-
 #mybigpiccontainer {
     width:100%;
     height:100vh;
@@ -417,6 +432,7 @@ blockquote {
     position: relative;
     height:500px;
 }
+
 @media screen and (min-width:450px){
   .shadedimage {background-attachment:fixed
   }
@@ -657,4 +673,13 @@ blockquote {
         width: 40px;
     }
   
+  }
+
+
+  .heroheading {
+    text-shadow: 2px 2px #222
+  }
+
+  #allherocontent li {
+    text-shadow: 2px 2px #222
   }

@@ -26,8 +26,11 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
       defer
     ></script>
+    <!-- needed alpine.js (similar to jQuery) for the navbar or carousel -->
    
     <script src="https://use.fontawesome.com/4e3025a09e.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 </head>
 <body>
   
@@ -167,7 +170,7 @@
              
             </ul>
 
-             <a id="ctabutton" href="./contact.html" class="relative z-40 px-10 py-2 font-sans text-2xl font-bold text-white border-4 border-yellow-50 lg:text-3xl cta"> Get in Touch </a>
+             <a id="ctabutton" href="./contact.html" class="relative z-40 px-10 py-2 font-sans text-2xl font-bold text-white border-4 shadow-xl border-yellow-50 lg:text-3xl cta"> Get in Touch </a>
            
         </div>
 
@@ -446,20 +449,29 @@
                     <img class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
                     </div>
 
-                    <div class="grid w-full shadedimage place-items-center">
+                    <div class="relative grid w-full shadedimage place-items-center">
+                      
+                     
 
                     <div class="p-4 text-2xl font-bold text-white lg:px-36 xl:text-4xl convinced">
                         <p class="font-extrabold text-lightgreen">Still not convinced?</p>
 
                         <p>We'd love to have a chat and go over anything you're not sure about!</p>
-                       <a class="block mb-6" href="tel:0873331301"><span class="text-lightgreen"><img class="inline pb-2 pr-4" src="./images/greenphone.svg"/>   087 333 1301   </span></a> 
-                       <a class="block my-2" href="tel:019010310"><span class="text-lightgreen"><img class="inline pb-2 pr-4" src="./images/officephone.png"/>    01 901 0310   </span></a> 
+                       <a class="block mb-6" href="tel:0873331301"><span class="text-lightgreen hover:text-green-100"><img class="inline pb-2 pr-4" src="./images/greenphone.svg"/>   087 333 1301   </span></a> 
+                       <a class="block my-2" href="tel:019010310"><span class="text-lightgreen hover:text-green-100"><img class="inline pb-2 pr-4" src="./images/officephone.png"/>    01 901 0310   </span></a> 
                     </div>
 
                     </div>
 
         </div>
       <script src="./carousel.js"></script>
+
+      <script>
+var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image);
+      </script>
+
+ 
 </body>
 
 

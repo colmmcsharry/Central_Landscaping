@@ -1195,6 +1195,14 @@ video {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
+.transition-all {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+.ease-in-out {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 :root
@@ -1253,6 +1261,19 @@ border:2px solid red;}
 .footerlogo {
   border:2px solid red;
   z-index:30;
+}
+
+#lads {
+  width:40vw;
+  right:4vw;
+  overflow:hidden;
+  top:10vh;
+}
+
+@media screen and (max-width:1100px){
+  #lads{
+  display:none}
+
 }
 
 
@@ -1875,6 +1896,12 @@ blockquote {
   #allherocontent li {
     text-shadow: 2px 2px #222
   }
+
+  .hover\:scale-125:hover {
+	--tw-scale-x: 1.25;
+	--tw-scale-y: 1.25;
+	transform: var(--tw-transform);
+}
 
   .hover\:text-white:hover {
 	--tw-text-opacity: 1;

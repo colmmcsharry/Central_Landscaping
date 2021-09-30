@@ -63,6 +63,19 @@ border:2px solid red;}
   z-index:30;
 }
 
+#lads {
+  width:40vw;
+  right:4vw;
+  overflow:hidden;
+  top:10vh;
+}
+
+@media screen and (max-width:1100px){
+  #lads{
+  display:none}
+
+}
+
 
 @media screen and (min-width:1200px){
 

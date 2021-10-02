@@ -66,6 +66,7 @@
             <button
               @click="isOpen = !isOpen"
               type="button"
+              aria-label="menu button"
               class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
               :class="{ 'transition transform-180': isOpen }"
             >
@@ -335,15 +336,15 @@
     <!-- Testimonials -->
 <div id="testimonialswrap" class="relative mt-20">
         <!-- <div id="leavesbg"> </div>  -->
-        <img src="images/leaf.png" width="250px" height="250px" class= "absolute leaf top-32 opacity-40 -rotate-6 left-10" />
-        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf top-1/4 opacity-60 right-20" />
-        <img src="images/leaf.png" width="250px" height="250px" class="absolute leaf -rotate-12 opacity-70 bottom-2/4 left-10" />
-        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-180 leaf top-52 right-10" />
-        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf -left-32 top-1/2" />
-        <img src="images/leaf.png" width="250px" height="250px" class="absolute rotate-45 leaf -right-32 top-1/2" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class="absolute rotate-45 leaf top-1/4 opacity-60 right-20" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class="absolute leaf -rotate-12 opacity-70 bottom-2/4 left-10" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class="absolute rotate-180 leaf top-52 right-10" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class="absolute rotate-45 leaf -left-32 top-1/2" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class="absolute rotate-45 leaf -right-32 top-1/2" />
+        <img src="images/leaf.png" alt="" width="250px" height="250px" class= "absolute leaf top-32 opacity-40 -rotate-6 left-10" />
         
-            <img class="sideleafimg" src="images/niceleaf.png" />
-            <img class="biggerleaf" src="images/niceleaf.png" />
+            <img class="sideleafimg" alt=""   src="images/niceleaf.png" />
+            <img class="biggerleaf" alt=""  src="images/niceleaf.png" />
          
             <h2 class="mb-20 text-5xl font-bold text-center lg:text-7xl ">Testimonials</h2>
 
@@ -351,7 +352,7 @@
                 <div class="relative flex items-center justify-center w-full mt-8 mb-8 overflow-hidden carousel-data">
                     <div class="carousel-item" role="group" aria-label="slide 1 of 5">
                         <div class="author-profile">
-                            <img  src="./images/headshot.png">
+                            <img alt=""   src="./images/headshot.png">
                             
                             
                         </div>
@@ -369,7 +370,7 @@
                     </div>
                     <div class="carousel-item" role="group" aria-label="slide 2 of 5">
                         <div class="author-profile">
-                            <img src="./images/headshot3.png">
+                            <img alt=""  src="./images/headshot3.png">
                         </div>
                         <p class="mt-8 italic text_caption">
                             Fran and the team worked really well together, where on time, clean and efficient. Done an amazing job on my front drive, would definitely recommend them! 
@@ -382,7 +383,7 @@
                     </div>
                     <div class="carousel-item" role="group" aria-label="slide 3 of 5">
                         <div class="author-profile">
-                            <img src="./images/headshot2.png">
+                            <img alt=""  src="./images/headshot2.png">
                         </div>
                         <p class="my-8 italic text_caption">
                             I highly recommended Sean and all the team at Central Landscaping they did my back garden. They arrived on time every morning and finished our garden within the time frame mentioned which was great as they had to come through the house. The work is 100% top quality and the price was real competitive plus the lads were great craic the 3 days they were here.
@@ -396,7 +397,7 @@
                     </div>
                     <div class="carousel-item" role="group" aria-label="slide 4 of 5">
                         <div class="author-profile">
-                            <img src="./images/headshot4.png">
+                            <img alt=""  src="./images/headshot4.png">
                         </div>
                         <p class="my-8 italic text_caption">
                             A great company to deal with started our driveway on Monday and finished on Wednesday couldn’t be any happier with the end result on our new driveway. Plus Sean is a gentleman.
@@ -409,7 +410,7 @@
                     </div>
                     <div class="carousel-item" role="group" aria-label="slide 5 of 5">
                         <div class="author-profile">
-                            <img src="./images/headshot5.png">
+                            <img alt=""  src="./images/headshot5.png">
                         </div>
                         <p class="my-8 italic text_caption">
                             I definitely recommend Central Landscaping. We had our patio paving removed from our back garden and replaced it with the imprint concrete. 
@@ -441,9 +442,9 @@
 
 
                     <div class="w-full mb-20 text-center " id="guarantee">
-                    <img class="inline m-auto w-36 xl:w-64" src='./images/icons/facebookratings.svg' /> 
+                    <img alt="Five star Facebook reviews"  class="inline m-auto w-36 xl:w-64" src='./images/icons/facebookratings.svg' /> 
 
-                    <img class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
+                    <img alt="five star google reviews"  class="inline m-auto w-36 xl:w-64" src='./images/icons/googleratings.svg' "/>
                     </div>
 
                     <div class="relative grid w-full shadedimage place-items-center">
@@ -454,8 +455,8 @@
                         <p class="font-extrabold text-lightgreen">Still not convinced?</p>
 
                         <p>We'd love to have a chat and go over anything you're not sure about!</p>
-                       <a class="block mb-6" href="tel:0873331301"><span class="text-lightgreen hover:text-green-100"><img class="inline pb-2 pr-4" src="./images/greenphone.svg"/>   087 333 1301   </span></a> 
-                       <a class="block my-2" href="tel:019010310"><span class="text-lightgreen hover:text-green-100"><img class="inline pb-2 pr-4" src="./images/officephone.png"/>    01 901 0310   </span></a> 
+                       <a class="block mb-6" href="tel:0873331301"><span class="text-lightgreen hover:text-green-100"><img alt="mobile phone icon"  class="inline pb-2 pr-4" src="./images/greenphone.svg"/>   087 333 1301   </span></a> 
+                       <a class="block my-2" href="tel:019010310"><span class="text-lightgreen hover:text-green-100"><img alt="office phone icon"  class="inline pb-2 pr-4" src="./images/officephone.png"/>    01 901 0310   </span></a> 
                     </div>
 
                     </div>
@@ -471,7 +472,7 @@
 <!-- footer begins -->
 <div class="relative w-full top-2 mycont">
   
-<img class="w-full" src="./images/christmas-trees-bottomgreen.svg" height="300px" />
+<img class="w-full" alt=""  src="./images/christmas-trees-bottomgreen.svg" height="300px" />
 </div>
 
 <div class="w-full pt-10 text-white bg-green-900 myfooter">
@@ -481,9 +482,9 @@
             
             <div class="flex flex-col w-full pr-6 space-y-4 footercontact sm:w-2/5">
                 
-                <span class="text-green-100 hover:text-white opacity-80"><img class="inline w-8 pr-3" src="./images/mobphone.png"/><a href="tel:0873331301">  087 333 1301 </a>   </span> 
-                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/officephone.png"/><a href="tel:019010310">   01 901 0310 </a>    </span> 
-                <span class="text-green-100 opacity-80"><img class="inline w-8 pr-3" src="./images/envelopegreen.png"/> salescentrallandscaping@gmail.com  </span>    
+                <span class="text-green-100 hover:text-white opacity-80"><img alt=""  class="inline w-8 pr-3" src="./images/mobphone.png"/><a href="tel:0873331301">  087 333 1301 </a>   </span> 
+                <span class="text-green-100 opacity-80"><img alt=""  class="inline w-8 pr-3" src="./images/officephone.png"/><a href="tel:019010310">   01 901 0310 </a>    </span> 
+                <span class="text-green-100 opacity-80"><img alt=""  class="inline w-8 pr-3" src="./images/envelopegreen.png"/> salescentrallandscaping@gmail.com  </span>    
                 <span class="mb-2 text-green-100 opacity-80">Lower Road, St.Edmundsbury, Lucan Village, Dublin</span>    
             </div>
             <div class="flex flex-col w-full space-y-4 sm:w-1/5">
@@ -498,9 +499,9 @@
             <div class="relative flex items-end w-full pt-6 mb-1 sm:w-1/5">
                 
                 <div class="flex flex-row space-x-4">
-                  <a target="_blank"  href="https://www.facebook.com/centralscape/"><i class="transition-all ease-in-out fab fa-facebook-f hover:scale-125"></i></a>  
-                  <a target="_blank" href="https://www.instagram.com/central_landscaping_dublin/"> <i class="transition-all ease-in-out hover:scale-125 fab fa-instagram"></i></a> 
-                  <a target="_blank" href="https://www.google.com/search?hl=en-IE&gl=ie&q=Central+Landscaping+And+Paving+-+Patio+Paving+-+Dublin+paving+contractor&ludocid=8666334844596006084&lsig=AB86z5VnHKtZf_mlCSCHfsFyhL26#lrd=0x486773cb28cdc807:0x7845019ffcbc2cc4,1"> <i class="transition-all ease-in-out fab fa-google hover:scale-125"></i></a> 
+                  <a target="_blank" aria-label="facebook"  rel="noopener"  href="https://www.facebook.com/centralscape/"><i class="transition-all ease-in-out fab fa-facebook-f hover:scale-125"></i></a>  
+                  <a target="_blank" aria-label="Instagram" rel="noopener" href="https://www.instagram.com/central_landscaping_dublin/"> <i class="transition-all ease-in-out hover:scale-125 fab fa-instagram"></i></a> 
+                  <a target="_blank" aria-label="Google" rel="noopener" href="https://www.google.com/search?hl=en-IE&gl=ie&q=Central+Landscaping+And+Paving+-+Patio+Paving+-+Dublin+paving+contractor&ludocid=8666334844596006084&lsig=AB86z5VnHKtZf_mlCSCHfsFyhL26#lrd=0x486773cb28cdc807:0x7845019ffcbc2cc4,1"> <i class="transition-all ease-in-out fab fa-google hover:scale-125"></i></a> 
                 </div>
             </div>
         </div>

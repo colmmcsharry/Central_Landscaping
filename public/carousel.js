@@ -21,6 +21,7 @@
             for (let i = 0; i < totalSlides; i++) {
                 const button = document.createElement('button');
                 button.setAttribute('type', 'button');
+                button.setAttribute('aria-label', 'carousel button');
                 button.setAttribute('btindex', i); 
                 indicatorContainer.appendChild(button);
                 indicatorButtons.push(button);

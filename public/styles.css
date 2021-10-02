@@ -643,12 +643,6 @@ video {
 .top-5 {
 	top: 1.25rem;
 }
-.top-32 {
-	top: 8rem;
-}
-.left-10 {
-	left: 2.5rem;
-}
 .top-1\/4 {
 	top: 25%;
 }
@@ -657,6 +651,9 @@ video {
 }
 .bottom-2\/4 {
 	bottom: 50%;
+}
+.left-10 {
+	left: 2.5rem;
 }
 .top-52 {
 	top: 13rem;
@@ -669,6 +666,9 @@ video {
 }
 .-right-32 {
 	right: -8rem;
+}
+.top-32 {
+	top: 8rem;
 }
 .z-40 {
 	z-index: 40;
@@ -844,10 +844,6 @@ video {
 .flex-grow {
 	flex-grow: 1;
 }
-.-rotate-6 {
-	--tw-rotate: -6deg;
-	transform: var(--tw-transform);
-}
 .rotate-45 {
 	--tw-rotate: 45deg;
 	transform: var(--tw-transform);
@@ -858,6 +854,10 @@ video {
 }
 .rotate-180 {
 	--tw-rotate: 180deg;
+	transform: var(--tw-transform);
+}
+.-rotate-6 {
+	--tw-rotate: -6deg;
 	transform: var(--tw-transform);
 }
 .scale-y-\[-1\] {
@@ -1166,11 +1166,11 @@ video {
 .opacity-60 {
 	opacity: 0.6;
 }
-.opacity-40 {
-	opacity: 0.4;
-}
 .opacity-70 {
 	opacity: 0.7;
+}
+.opacity-40 {
+	opacity: 0.4;
 }
 .shadow-lg {
 	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -1562,7 +1562,7 @@ blockquote {
 }
 
 #lawns {
-  background:url('./images/pavingmob.jpg');
+  background:url('./images/pavingmob.jpeg');
   background-size:cover;
   background-position: 20% 10%;
   background-repeat:no-repeat;
@@ -1601,7 +1601,7 @@ blockquote {
     background-image:linear-gradient(
         to bottom right, 
         rgba(0,0,0,0.4), rgba(0,0,0,0.0)
-      ), url(./images/pavingmob.jpg);
+      ), url(./images/pavingmob.jpeg);
     background-size:  cover;
 } 
 
@@ -1612,7 +1612,7 @@ blockquote {
         background: linear-gradient(
             to right, 
             rgba(0,0,0,0.4), rgba(350,350,350,0.0)
-          ), url(./images/pavingcropped.jpg) no-repeat;
+          ), url(./images/pavingcroppedenhanced.jpeg) no-repeat;
         position: relative;
         width: 100%;
         height: 100vh;

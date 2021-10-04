@@ -69,7 +69,7 @@
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZK8SZRSG3"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-8ZK8SZRSG3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -80,7 +80,10 @@
 
 
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+<!-- delay loading of font-awesome stylesheet -->
+<link rel="preload" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></noscript>
+
 
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
@@ -88,9 +91,8 @@
     ></script>
     <!-- needed alpine.js (similar to jQuery) for the navbar or carousel -->
    
-    <script src="https://use.fontawesome.com/4e3025a09e.js"></script>
+    <script defer src="https://use.fontawesome.com/4e3025a09e.js"></script>
 
- 
 </head>
 <body>
   

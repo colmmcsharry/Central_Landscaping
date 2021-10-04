@@ -10,8 +10,8 @@
     "tailwindcss": "^2.2.4"
   },
   "scripts": {
-    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./public/styles.css -w --verbose",
-    "prod": "NODE_ENV=production postcss tailwind.css -o ./public/styles.css"
+    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./styles.css -w --verbose",
+    "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css"
   },
   "keywords": [],
   "author": "",

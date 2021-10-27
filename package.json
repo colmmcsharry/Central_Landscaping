@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./styles.css -w --verbose",
-    "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css"
+    "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css",
+    "watch": "watch 'npm run build' ./dist"
   },
   "keywords": [],
   "author": "",

@@ -1588,7 +1588,16 @@ blockquote {
 
 
 
+#porcelain {
+	color: blue !important;
+	text-decoration: underline !important;
+}
 
+#porcelainspan {
+	color: blue !important;
+	text-decoration: underline !important;
+	font-size: 14px;
+}
 
 
 

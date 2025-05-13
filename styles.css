@@ -1586,21 +1586,6 @@ blockquote {
     transform:translateX(-50%);
 }
 
-
-
-#porcelain {
-	color: blue !important;
-	text-decoration: underline !important;
-}
-
-#porcelainspan {
-	color: blue !important;
-	text-decoration: underline !important;
-	font-size: 14px;
-}
-
-
-
 #mybigpiccontainer {
     width:100%;
     height:100vh;

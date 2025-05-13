@@ -207,70 +207,100 @@
     <h3 class="px-10 mb-10 text-center text-md lg:text-3xl lg:px-20" id="services">
       We are renowned specialists in a wide range of landscaping services in the greater Dublin area. 
     </h3>
+    <p class="px-10 mb-10 text-center text-md lg:text-xl lg:px-20 text-green-700">
+      Click a service for more information
+    </p>
+
+<!-- Custom styles for equal height cards -->
+<style>
+  @media (min-width: 1024px) {
+    .card {
+      height: 440px; /* Fixed height for desktop */
+      display: flex;
+      flex-direction: column;
+    }
+    .card p {
+      flex-grow: 1; /* Allow the paragraph to expand to fill available space */
+      overflow: hidden; /* Prevent text overflow */
+      text-wrap: balance; /* Improve text layout */
+    }
+  }
+</style>
 
 <div class="text-center outerwrapper">
     <div class="relative w-full mx-auto text-center border-solid lg:inline-grid lg:grid-cols-3 xl:grid-cols-4 2xl:px-48 mycontainer ">
       
-      <a href="https://centrallandscapingandpaving.ie/porcelain-paving.html">
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+      <a href="porcelain-paving.html">
+        <div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
             <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg'></div>
             <div aria-hidden="true" class="absolute grid w-20 h-20 text-green-400 bg-white rounded-full shadow-lg top-20 circle place-items-center porcelain"> <img class="rounded-full" src="images/concrete.png" width="60px" height="60px"/>  </div>
-            <h3 id="porcelain" class="relative mb-4 font-bold text-center underline top-5">Porcelain Paving</h3>
-            <span id="porcelainspan">Click to see our dedicated Porcelain page</span>
-            <p class="p-2 text-left text-gray-500"> Click to see our dedicated Porcelain Paving page. Choose porcelain for a durable and stylish outdoor upgrade. Popular in Dublin, porcelain is not only strong
-            but also resistant to stains and weather. With a range that suits all styles, our team guarantees a neat and lasting
-            finish.</p>
+            <h3 id="porcelain" class="relative mb-8 font-bold text-center top-5">Porcelain Paving</h3>
+            <p class="p-2 text-left text-gray-500">Choose porcelain for a durable and stylish outdoor upgrade. Porcelain is not only strong but also resistant to stains and weather. With a range that suits all styles, our team guarantees a neat and lasting finish.</p>
         </div>
         </a>
 
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+        <a href="landscaping.html">
+        <div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
             <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="landscape"></div>
             <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/trowel.png" width="60px" height="60px"/>  </div>
             <h3 class="relative mb-8 font-bold text-center top-5">Landscaping</h3>
             <p class="p-2 text-left text-gray-500"> Skilled in all aspects of landscaping, including paving, decking, carpentry, masonry and stone work, our dedicated craftsmen can handle any project. The complete green solution for urban, suburban and rural landscape design</p>
         </div>
+        </a>
 
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+        <a href="patio-installation.html">
+        <div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
             <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="patio"></div>
             <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/patiopn.png" width="65px" height="65px"/>  </div>
             <h3 class="relative mb-8 font-bold text-center top-5">Patio Installation</h3>
             <p class="p-2 text-left text-gray-500">A beautifully designed patio is a perfect complement to your home. Whatever the size or shape of your garden, our professional installers are able to create any appearance to suit different tastes, budgets and individual requirements.</p>
         </div>
+        </a>
 
-        <div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+        <a href="driveways.html">
+        <div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
             <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="driveway"></div>
             <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/drivway.png" width="65px" height="65px"/>  </div>
             <h3 class="relative mb-8 font-bold text-center top-5">Driveways</h3>
             <p class="p-2 text-left text-gray-500"> Our highly skilled team can install a high quality paved driveway for you and your family to enjoy for many years. We supply only the best stone for use on your new drive with many extra options....</p>
         </div>
+        </a>
 
-<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+<a href="plastering.html">
+<div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
     <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="plaster"></div>
     <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full scale-y-[-1]" src="images/trowel.png" width="60px" height="60px"/>  </div>
     <h3 class="relative mb-8 font-bold text-center top-5">Plastering</h3>
     <p class="p-2 text-left text-gray-500">Our team can plaster/render or dash your new garden walls and piers to complement a new garden or match new walls to the finish on your house.</p>
 </div>
+</a>
 
-<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+<a href="garden-walls.html">
+<div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
     <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="walls"></div>
     <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/wall.png" width="60px" height="60px"/>  </div>
     <h3 class="relative mb-8 font-bold text-center top-5">Garden Walls/Pillars </h3>
     <p class="p-2 text-left text-gray-500"> We have a professional team of builders on our crew ready to build your new garden walls or pillars we cover it all from brick, blocks, natural stone walls and pillars we cover it all.</p>
 </div>
+</a>
 
-<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block'>
+<a href="grass-lawns.html">
+<div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block'>
     <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="lawns"></div>
     <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/grass.png" width="60px" height="60px"/>  </div>
     <h3 class="relative mb-8 font-bold text-center top-5"> Grass Lawns</h3>
     <p class="p-2 text-left text-gray-500"> Whether a new grass turf lawn to complement the new patio or driveway or a new artificial grass lawn we can handle it all call our team today to organise your free quote.</p>
 </div>
+</a>
 
-<div class='relative mx-auto my-6 shadow-lg rounded-xl w-72 card lg:inline-block' >
+<a href="garden-overhauls.html">
+<div class='relative mx-auto my-6 pb-2 shadow-lg rounded-xl w-72 card lg:inline-block' >
     <div aria-hidden="true" class='w-full h-32 mb-8 rounded-t-xl cardimg' id="overhaul"></div>
     <div aria-hidden="true" class="absolute grid w-20 h-20 bg-white rounded-full shadow-lg top-20 circle place-items-center"> <img class="rounded-full" src="images/garden.png" width="60px" height="60px"/>  </div>
     <h3 class="relative mb-8 font-bold text-center top-5">Garden Overhauls</h3>
     <p class="p-2 text-left text-gray-500"> We love turning grubby old gardens into something you'll be proud to show your neighbours. We are skilled and experienced in all areas, from raised beds, piers and walls to all types of paving.</p>
 </div>
+</a>
 
 </div>
 

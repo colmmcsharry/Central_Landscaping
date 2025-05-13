@@ -144,7 +144,7 @@
 
                 <li class="mr-3">
                   <a
-                    class="inline-block px-4 py-2 font-bold text-green-100 no-underline"
+                    class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
                     href="./index.html"
                     @click="isOpen = false"
                     >Home
@@ -158,16 +158,16 @@
                     >About
                   </a>
                 </li>
-                <!-- Desktop dropdown (hidden on mobile) -->
-                <li class="mr-3 relative hidden lg:block" x-data="{ isDropdownOpen: false }">
+                <!-- Services link with dropdown -->
+                <li class="mr-3 relative" x-data="{ isDropdownOpen: false }">
                   <a
-                    class="inline-block px-4 py-2 font-bold text-white no-underline hover:text-white hover:text-underline"
-                    href="./services.html"
+                    class="inline-block px-4 py-2 font-bold text-white no-underline"
+                    href="javascript:void(0)"
                     @click.prevent="isDropdownOpen = !isDropdownOpen"
                     >Services <i class="fas fa-chevron-down text-xs ml-1"></i>
                   </a>
                   <div 
-                    class="absolute left-0 mt-2 w-96 bg-green-900 shadow-lg z-50 rounded-b-lg" 
+                    class="absolute left-0 mt-2 w-96 bg-darkgreen shadow-lg z-50 rounded-b-lg" 
                     x-show="isDropdownOpen"
                     @click.away="isDropdownOpen = false"
                     x-transition:enter="transition ease-out duration-200"
@@ -175,36 +175,15 @@
                     x-transition:enter-end="opacity-100 transform scale-100"
                     style="display: none;"
                   >
-                    <a href="./landscaping.html" class="block px-5 py-2 text-green-300 hover:text-white">Landscaping</a>
-                    <a href="./patio-installation.html" class="block px-5 py-2 text-green-300 hover:text-white">Patio Installation</a>
-                    <a href="./driveways.html" class="block px-5 py-2 text-green-300 hover:text-white">Driveways</a>
-                    <a href="./garden-walls.html" class="block px-5 py-2 text-green-300 hover:text-white">Garden Walls</a>
-                    <a href="./grass-lawns.html" class="block px-5 py-2 text-green-300 hover:text-white">Grass Lawns</a>
-                    <a href="./garden-overhauls.html" class="block px-5 py-2 text-green-300 hover:text-white">Garden Overhauls</a>
-                    <a href="./porcelain-paving.html" class="block px-5 py-2 text-green-300 hover:text-white">Porcelain Paving</a>
-                    <a href="./plastering.html" class="block px-5 py-2 text-green-300 hover:text-white">Plastering</a>
-                    <a href="./services.html" class="block px-5 py-2 text-white font-bold">All Services</a>
-                  </div>
-                </li>
-                
-                <!-- Mobile services dropdown (hidden on desktop) -->
-                <li class="mr-3 lg:hidden" x-data="{ isServicesMobileOpen: false }">
-                  <a
-                    class="inline-block px-4 py-2 font-bold text-white no-underline"
-                    href="#"
-                    @click.prevent="isServicesMobileOpen = !isServicesMobileOpen"
-                    >Services <i class="fas fa-chevron-down text-xs ml-1"></i>
-                  </a>
-                  <div x-show="isServicesMobileOpen" class="pl-8" style="display: none;">
-                    <a href="./services.html" class="block py-2 text-white font-bold" @click="isOpen = false">All Services</a>
-                    <a href="./landscaping.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Landscaping</a>
-                    <a href="./patio-installation.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Patio Installation</a>
-                    <a href="./driveways.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Driveways</a>
-                    <a href="./garden-walls.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Garden Walls</a>
-                    <a href="./grass-lawns.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Grass Lawns</a>
-                    <a href="./garden-overhauls.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Garden Overhauls</a>
-                    <a href="./porcelain-paving.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Porcelain Paving</a>
-                    <a href="./plastering.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Plastering</a>
+                    <a href="./landscaping.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Landscaping</a>
+                    <a href="./patio-installation.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Patio Installation</a>
+                    <a href="./driveways.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Driveways</a>
+                    <a href="./garden-walls.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Garden Walls</a>
+                    <a href="./grass-lawns.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Grass Lawns</a>
+                    <a href="./garden-overhauls.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Garden Overhauls</a>
+                    <a href="./porcelain-paving.html" class="block px-5 py-2 text-lightgreen whitespace-nowrap hover:text-white">Porcelain Paving</a>
+                    <a href="./plastering.html" class="block px-5 py-2 text-lightgreen hover:text-white">Plastering</a>
+                    <a href="./services.html" class="block px-5 py-2 text-white font-bold whitespace-nowrap">All Services</a>
                   </div>
                 </li>
                 <li class="mr-3">

@@ -158,7 +158,7 @@
                     >About
                   </a>
                 </li>
-                <!-- Desktop dropdown -->
+                <!-- Desktop dropdown (hidden on mobile) -->
                 <li class="mr-3 relative hidden lg:block" x-data="{ isDropdownOpen: false }">
                   <a
                     class="inline-block px-4 py-2 font-bold text-white no-underline hover:text-white hover:text-underline"
@@ -187,7 +187,7 @@
                   </div>
                 </li>
                 
-                <!-- Mobile services dropdown -->
+                <!-- Mobile services dropdown (hidden on desktop) -->
                 <li class="mr-3 lg:hidden" x-data="{ isServicesMobileOpen: false }">
                   <a
                     class="inline-block px-4 py-2 font-bold text-white no-underline"

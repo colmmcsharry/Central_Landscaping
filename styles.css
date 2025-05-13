@@ -297,7 +297,9 @@ Add the correct display in Chrome and Safari.
 
 summary {
 	display: list-item;
-}/**
+}
+
+/**
  * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications.
@@ -2105,4 +2107,33 @@ blockquote {
 		padding-left: 12rem;
 		padding-right: 12rem;
 	}
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  min-width: 200px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Fix for "200+ Completed Jobs" text wrapping */
+.whitespace-nowrap {
+  white-space: nowrap;
+  width: auto !important;
+  min-width: 140px;
+}
+
+/* More specific fix for the completed jobs element */
+#completed-jobs {
+  width: auto !important;
+  min-width: 160px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Additional mobile-specific adjustments */
+@media screen and (max-width: 450px) {
+  #completed-jobs {
+    min-width: 170px;
+    font-size: 0.95rem;
+  }
 }

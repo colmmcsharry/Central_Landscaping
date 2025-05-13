@@ -217,14 +217,57 @@
                     >About
                   </a>
                 </li>
-                <li class="mr-3">
+                
+                <!-- Desktop dropdown -->
+                <li class="mr-3 relative" x-data="{ isDropdownOpen: false }">
                   <a
                     class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                     href="./services.html"
-                    @click="isOpen = false"
-                    >Services
+                    @click.prevent="isDropdownOpen = !isDropdownOpen"
+                    >Services <i class="fas fa-chevron-down text-xs ml-1"></i>
                   </a>
+                  <div 
+                    class="absolute left-0 mt-2 w-96 bg-green-900 shadow-lg z-50 rounded-b-lg" 
+                    x-show="isDropdownOpen"
+                    @click.away="isDropdownOpen = false"
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 transform scale-95"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    style="display: none;"
+                  >
+                    <a href="./landscaping.html" class="block px-5 py-2 text-green-300 hover:text-white">Landscaping</a>
+                    <a href="./patio-installation.html" class="block px-5 py-2 text-green-300 hover:text-white whitespace-nowrap">Patio Installation</a>
+                    <a href="./driveways.html" class="block px-5 py-2 text-green-300 hover:text-white">Driveways</a>
+                    <a href="./garden-walls.html" class="block px-5 py-2 text-green-300 hover:text-white whitespace-nowrap">Garden Walls</a>
+                    <a href="./grass-lawns.html" class="block px-5 py-2 text-green-300 hover:text-white">Grass Lawns</a>
+                    <a href="./garden-overhauls.html" class="block px-5 py-2 text-green-300 hover:text-white whitespace-nowrap">Garden Overhauls</a>
+                    <a href="./porcelain-paving.html" class="block px-5 py-2 text-green-300 hover:text-white whitespace-nowrap">Porcelain Paving</a>
+                    <a href="./plastering.html" class="block px-5 py-2 text-green-300 hover:text-white">Plastering</a>
+                    <a href="./services.html" class="block px-5 py-2 text-green-300 hover:text-white font-bold whitespace-nowrap">All Services</a>
+                  </div>
                 </li>
+                
+                <!-- Mobile services dropdown -->
+                <li class="mr-3 lg:hidden" x-data="{ isServicesMobileOpen: false }">
+                  <a
+                    class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
+                    href="#"
+                    @click.prevent="isServicesMobileOpen = !isServicesMobileOpen"
+                    >Services <i class="fas fa-chevron-down text-xs ml-1"></i>
+                  </a>
+                  <div x-show="isServicesMobileOpen" class="pl-8" style="display: none;">
+                    <a href="./services.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">All Services</a>
+                    <a href="./landscaping.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Landscaping</a>
+                    <a href="./patio-installation.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Patio Installation</a>
+                    <a href="./driveways.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Driveways</a>
+                    <a href="./garden-walls.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Garden Walls</a>
+                    <a href="./grass-lawns.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Grass Lawns</a>
+                    <a href="./garden-overhauls.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Garden Overhauls</a>
+                    <a href="./porcelain-paving.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Porcelain Paving</a>
+                    <a href="./plastering.html" class="block py-2 text-green-300 hover:text-white" @click="isOpen = false">Plastering</a>
+                  </div>
+                </li>
+                
                 <li class="mr-3">
                     <a
                       class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
@@ -452,10 +495,10 @@
                         </div>
                         <p class="z-10 p-1 my-8 italic bg-white text_caption">
                             They arrived on and time finished my new driveway from start to finish in just 2 days. The workmanship is top quality and the price they quoted was very competitive compared to other companies. 
-        Some previous company’s quoted us saying that the price might increase during the job if something were to happen like if they hit pipes or cables while excavating the old driveway etc.</p>
+        Some previous company's quoted us saying that the price might increase during the job if something were to happen like if they hit pipes or cables while excavating the old driveway etc.</p>
 
         <p class="z-10 p-1 italic text_caption">When Sean from Central Landscaping quoted us he was able to distinguish where all underground pipes and cables were located and quoted us 1 price that remained the same throughout the job.
-        Their price was way more competitive as they can allow for these misadventures where I found a lot other company’s seem to be charging the customer for their mistakes.</p>
+        Their price was way more competitive as they can allow for these misadventures where I found a lot other company's seem to be charging the customer for their mistakes.</p>
                         </p>
                         <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>
                         <span class="mb-4 caption-author">
@@ -494,7 +537,7 @@
                             <img alt="" loading="lazy"  src="./images/headshot4.png">
                         </div>
                         <p class="my-8 italic text_caption">
-                            A great company to deal with started our driveway on Monday and finished on Wednesday couldn’t be any happier with the end result on our new driveway. Plus Sean is a gentleman.
+                            A great company to deal with started our driveway on Monday and finished on Wednesday couldn't be any happier with the end result on our new driveway. Plus Sean is a gentleman.
 
                         </p>
                         <span><i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> <i class="text-green-300 fa fa-star" aria-hidden="true"></i> </span>

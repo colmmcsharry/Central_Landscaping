@@ -10,6 +10,8 @@ collections:
     label: "Blog"
     folder: "blog"
     create: true
+    extension: "html"
+    format: "html"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}

@@ -59,6 +59,41 @@ defer
   gtag('config', 'G-8ZK8SZRSG3');
 </script>
 
+<!-- Logo resize on scroll script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create a small invisible marker element at the top of the page
+    const scrollMarker = document.createElement('div');
+    scrollMarker.style.position = 'absolute';
+    scrollMarker.style.top = '0';
+    scrollMarker.style.height = '1px';
+    scrollMarker.style.width = '100%';
+    scrollMarker.style.pointerEvents = 'none';
+    scrollMarker.style.opacity = '0';
+    document.body.appendChild(scrollMarker);
+    
+    // Get the logo element
+    const logo = document.querySelector('nav a img');
+    
+    // Create the observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          // User has scrolled past the top
+          logo.style.width = '110px';
+          logo.style.transition = 'width 0.3s ease';
+        } else {
+          // User is at the top
+          logo.style.width = '220px';
+        }
+      });
+    }, { threshold: 0 });
+    
+    // Start observing
+    observer.observe(scrollMarker);
+  });
+</script>
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 </head>
@@ -68,7 +103,7 @@ defer
            <!-- navbar begins  -->
 
             <nav
-            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-6" id="mynavbar"
+            class="fixed top-0 flex flex-wrap items-center justify-between w-full p-4" id="mynavbar"
             x-data="{ isOpen: false }"
             @keydown.escape="isOpen = false"
             :class="{ 'shadow-lg bg-gray-800' : isOpen , 'bg-gray-800' : !isOpen}"

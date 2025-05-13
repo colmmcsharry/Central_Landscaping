@@ -76,8 +76,16 @@
               const postElement = document.createElement('div');
               postElement.className = 'blog-post';
               
-              // Check if the post slug already ends with .html
-              const slugWithExtension = post.slug.endsWith('.html') ? post.slug : `${post.slug}.html`;
+              // Check if the post slug already has an extension
+              let slugWithExtension = post.slug;
+              if (!slugWithExtension.endsWith('.html') && !slugWithExtension.endsWith('.md')) {
+                slugWithExtension = `${post.slug}.html`;
+              }
+              
+              // For .md files, add .html to make them render properly
+              if (slugWithExtension.endsWith('.md')) {
+                slugWithExtension = `${slugWithExtension}.html`;
+              }
               
               postElement.innerHTML = `
                 <div class="relative mx-auto my-6 shadow-lg rounded-xl w-full max-w-4xl">

@@ -2137,3 +2137,41 @@ blockquote {
     font-size: 0.95rem;
   }
 }
+
+.hover\:bg-darkgreen:hover {
+	background-color: var(--darkgreen);
+}
+
+.hover\:text-green-500:hover {
+	--tw-text-opacity: 1;
+	color: #10B981;
+}
+
+.hover\:bg-green-400:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+}
+
+.focus\:border-gray-500:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+/* Button styles */
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+}
+
+.hover\:bg-green-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+}
+
+/* Additional mobile-specific adjustments */
+@media screen and (max-width: 450px) {
+  #completed-jobs {
+    min-width: 170px;
+    font-size: 0.95rem;
+  }
+}

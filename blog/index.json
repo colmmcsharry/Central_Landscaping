@@ -1,5 +1,12 @@
 [
   {
+    "title": "Another Test Blog",
+    "slug": "2025-05-13-another-test-blog",
+    "date": "2025-05-13",
+    "thumbnail": "/images/blog/low-maintenance-garden.jpg",
+    "description": "Hello this is a test description."
+  },
+  {
     "title": "Test Blog",
     "slug": "2025-05-13-test-blog.md",
     "date": "2025-05-13",

@@ -1,18 +1,10 @@
----
-layout: blog
-title: Another Test Blog
-date: 2025-05-13T22:55:45.603Z
-thumbnail: /images/blog/low-maintenance-garden.jpg
-description: Hello this is a test description.
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Another Test Blog | Central Landscaping Blog</title>
-    <meta name="description" content="Hello this is a test description.">
+    <title>Blog Post | Central Landscaping Blog</title>
     <link rel="stylesheet" href="../styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +25,9 @@ description: Hello this is a test description.
     ></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <!-- Blog post template script -->
+    <script src="./template.js"></script>
 
     <!-- Logo resize on scroll script -->
     <script>
@@ -207,20 +202,16 @@ description: Hello this is a test description.
             </a>
         </div>
 
-        <img src="/images/blog/low-maintenance-garden.jpg" alt="Another Test Blog" class="w-full h-64 md:h-96 object-cover rounded-xl mb-8">
+        <img src="" alt="Blog post image" class="blog-image w-full h-64 md:h-96 object-cover rounded-xl mb-8">
         
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Another Test Blog</h1>
+        <h1 class="blog-title text-4xl md:text-6xl font-bold mb-4">Blog Post</h1>
         
         <div class="flex items-center text-gray-600 mb-8">
-            <span>May 13, 2025</span>
+            <span class="blog-date"></span>
         </div>
 
-        <div class="prose prose-lg max-w-none">
-            <p>This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site. This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site.</p>
-
-            <p>This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site. This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site.</p>
-
-            <p>This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site. This is the main content of the blog. I can write sentences like this. Hopefully it works and looks good on the site.</p>
+        <div id="blog-content" class="prose prose-lg max-w-none">
+            {{CONTENT}}
         </div>
 
         <div class="mt-12 pt-8 border-t border-gray-200">
@@ -266,4 +257,4 @@ description: Hello this is a test description.
         </div>
     </div>
 </body>
-</html>
+</html> 

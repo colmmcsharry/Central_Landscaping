@@ -123,6 +123,41 @@
    
     <script defer src="https://use.fontawesome.com/4e3025a09e.js"></script>
 
+  <!-- Logo resize on scroll script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create a small invisible marker element at the top of the page
+      const scrollMarker = document.createElement('div');
+      scrollMarker.style.position = 'absolute';
+      scrollMarker.style.top = '0';
+      scrollMarker.style.height = '1px';
+      scrollMarker.style.width = '100%';
+      scrollMarker.style.pointerEvents = 'none';
+      scrollMarker.style.opacity = '0';
+      document.body.appendChild(scrollMarker);
+      
+      // Get the logo element
+      const logo = document.querySelector('nav a img');
+      
+      // Create the observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            // User has scrolled past the top
+            logo.style.width = '110px';
+            logo.style.transition = 'width 0.3s ease';
+          } else {
+            // User is at the top
+            logo.style.width = '220px';
+          }
+        });
+      }, { threshold: 0 });
+      
+      // Start observing
+      observer.observe(scrollMarker);
+    });
+  </script>
+
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->

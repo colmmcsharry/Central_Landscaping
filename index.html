@@ -293,6 +293,14 @@
                 <li class="mr-3">
                   <a
                     class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
+                    href="./blog.html"
+                    @click="isOpen = false"
+                    >Blog
+                  </a>
+                </li>
+                <li class="mr-3">
+                  <a
+                    class="inline-block px-4 py-2 no-underline navlink hover:text-white hover:text-underline"
                     href="./contact.html"
                     @click="isOpen = false"
                     >Contact
@@ -649,6 +657,7 @@
                 <a href="./about.html" class="text-green-100 opacity-80 hover:text-white">About Us</a>
                 <a href="./services.html" class="text-green-100 opacity-80 hover:text-white">Services</a>
                 <a href="./gallery.html" class="text-green-100 opacity-80 hover:text-white">Gallery</a>
+                <a href="./blog.html" class="text-green-100 opacity-80 hover:text-white">Blog</a>
                 <a href="./contact.html"  class="text-green-100 opacity-80 hover:text-white">Contact</a>
                
             </div>
@@ -668,5 +677,20 @@
     </div>
 </div>
 <!-- footer ends -->
+
+<!-- Netlify Identity Widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
 
 </html>

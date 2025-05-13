@@ -11,7 +11,7 @@ collections:
     folder: "blog"
     create: true
     extension: "html"
-    format: "html"
+    format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: true

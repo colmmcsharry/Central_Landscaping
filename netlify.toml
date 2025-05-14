@@ -4,11 +4,13 @@
 [build.environment]
   NODE_VERSION = "16"
 
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
+# Skip build commands since we're serving static HTML
+# No build command means Netlify will just publish the files
 
-# Redirect rule for Netlify admin, if needed
+# Redirect rule for static site
 [[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200 
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  conditions = {Role = ["anonymous"]} 

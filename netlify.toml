@@ -1,0 +1,23 @@
+[build]
+  publish = "/"
+  command = "npm install gray-matter && node blog/auto-index-generator.js"
+
+[build.environment]
+  NODE_VERSION = "16"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+# Handle blog index generation for Netlify CMS
+[dev]
+  command = "npm install gray-matter && node blog/auto-index-generator.js"
+
+# Trigger index generation on every deploy
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"
+
+# Redirect rule for Netlify CMS admin
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200 

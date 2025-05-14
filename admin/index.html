@@ -48,6 +48,26 @@
           });
         }
         
+        // Setup event handler for successful publish
+        if (window.CMS) {
+          window.CMS.registerEventListener({
+            name: 'postPublished',
+            handler: function(data) {
+              // Trigger a build hook to rebuild the site and generate the index.json
+              fetch('https://api.netlify.com/build_hooks/6824e57d24f75e796728d955', {
+                method: 'POST'
+              }).then(function(response) {
+                console.log('Build triggered successfully');
+              }).catch(function(error) {
+                console.error('Error triggering build:', error);
+              });
+              
+              // Also show a notification to the user
+              alert('Blog post published successfully! The site will rebuild automatically to display your changes.');
+            }
+          });
+        }
+        
         // Simple helper to improve editor experience
         setTimeout(function() {
           // Make the "required" text more noticeable

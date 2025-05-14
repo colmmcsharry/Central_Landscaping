@@ -2,6 +2,13 @@ backend:
   name: git-gateway
   branch: main # Or your main branch name
 
+# This ensures the blog index is updated
+publish_mode: editorial_workflow
+
+# Add hook for auto-generating index.json
+site_url: https://centrallandscapingandpaving.ie 
+local_backend: true
+
 media_folder: "images/blog" # Media files will be stored here
 public_folder: "/images/blog" # The src attribute for uploaded media
 
@@ -11,7 +18,6 @@ editor:
 
 # Add custom preview styles
 locale: 'en'
-site_url: https://centrallandscapingandpaving.ie
 
 collections:
   - name: "blog"

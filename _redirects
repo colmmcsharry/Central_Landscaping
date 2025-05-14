@@ -1,5 +1,0 @@
-# Redirect .md URLs to .md.html
-/blog/*.md /blog/:splat.md.html 200
-
-# Handle redirects for clean URLs
-/blog/* /blog/:splat 200 

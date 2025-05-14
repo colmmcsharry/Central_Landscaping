@@ -10,7 +10,7 @@
     "tailwindcss": "^2.2.4"
   },
   "scripts": {
-    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./styles.css",
+    "build": "NODE_ENV=production postcss tailwind.css -o ./styles.css",
     "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css",
     "watch": "watch 'npm run build' ./dist"
   },

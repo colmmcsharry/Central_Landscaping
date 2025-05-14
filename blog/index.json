@@ -1,5 +1,12 @@
 [
   {
+    "title": "title of blog",
+    "slug": "2025-05-14-title-of-blog",
+    "date": "2025-05-14",
+    "thumbnail": "/images/blog/spring-garden.jpg",
+    "description": "description for the blog."
+  },
+  {
     "title": "Key Landscaping Principles",
     "slug": "2025-05-13-another-test-blog",
     "date": "2025-05-13",

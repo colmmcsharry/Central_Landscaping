@@ -18,6 +18,8 @@ collections:
     label: "Blog"
     folder: "blog"
     create: true
+    extension: "html" # Explicitly set HTML extension
+    format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: true

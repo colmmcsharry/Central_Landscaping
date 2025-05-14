@@ -84,7 +84,7 @@
         <button
           @click="isOpen = !isOpen"
           type="button"
-          class="block px-2 text-gray-500 lg:hidden hover:text-white focus:outline-none focus:text-white"
+          class="block px-2 text-lightgreen lg:hidden hover:text-white focus:outline-none focus:text-white"
           :class="{ 'transition transform-180': isOpen }"
         >
           <svg
@@ -117,13 +117,13 @@
             class="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex"
           >
             <li class="mr-3">
-                <a class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                <a class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 navlink hover:text-white hover:text-underline"
                     href="tel:0873331301"
                     @click="isOpen = false"> 
                     <img class="inline w-10 p-2" src="./images/mobphone.png"/>087 333 1301 
                 </a>
                 
-                <a class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 hover:text-white hover:text-underline"
+                <a class="inline-block px-4 py-2 mr-6 text-green-300 no-underline -left-32 navlink hover:text-white hover:text-underline"
                     href="tel:016856788"
                     @click="isOpen = false"> 
                     <img class="inline w-10 p-2" src="./images/officephone.png"/>01 685 6788 
@@ -132,7 +132,7 @@
 
             <li class="mr-3">
               <a
-                class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                class="inline-block px-4 py-2 text-green-100 no-underline navlink hover:text-white hover:text-underline"
                 href="./index.html"
                 @click="isOpen = false"
                 >Home
@@ -140,7 +140,7 @@
             </li>
             <li class="mr-3">
               <a
-                class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                class="inline-block px-4 py-2 text-green-100 no-underline navlink hover:text-white hover:text-underline"
                 href="./about.html"
                 @click="isOpen = false"
                 >About
@@ -149,7 +149,7 @@
             <!-- Services link with dropdown -->
             <li class="mr-3 relative" x-data="{ isDropdownOpen: false }">
               <a
-                class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                class="inline-block px-4 py-2 text-green-100 no-underline navlink hover:text-white hover:text-underline"
                 href="javascript:void(0)"
                 @click.prevent="isDropdownOpen = !isDropdownOpen"
                 >Services <i class="fas fa-chevron-down text-xs ml-1"></i>
@@ -176,7 +176,7 @@
             </li>
             <li class="mr-3">
               <a
-                class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                class="inline-block px-4 py-2 text-green-100 no-underline navlink hover:text-white hover:text-underline"
                 href="./gallery.html"
                 @click="isOpen = false"
                 >Gallery
@@ -192,7 +192,7 @@
             </li>
             <li class="mr-3">
               <a
-                class="inline-block px-4 py-2 text-green-100 no-underline hover:text-white hover:text-underline"
+                class="inline-block px-4 py-2 text-green-100 no-underline navlink hover:text-white hover:text-underline"
                 href="./contact.html"
                 @click="isOpen = false"
                 >Contact
@@ -207,7 +207,7 @@
 
     <!-- Blog Section -->
     <section class="mt-52 mb-20">
-        <h2 class="mb-10 text-6xl text-center lg:text-8xl" id="blog">Central Landscaping Blog</h2>
+        <h2 class="mb-10 text-5xl text-center lg:text-7xl" id="blog">Central Landscaping Blog</h2>
         <h3 class="px-10 text-center text-md lg:text-3xl lg:px-20 mb-16">
             Latest tips, advice, and updates from our team
         </h3>

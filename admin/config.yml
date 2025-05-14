@@ -5,12 +5,20 @@ backend:
 media_folder: "images/blog" # Media files will be stored here
 public_folder: "/images/blog" # The src attribute for uploaded media
 
+# Improve the Markdown editor experience
+editor:
+  preview: true # Show preview panel
+
+# Add custom preview styles
+locale: 'en'
+site_url: https://centrallandscapingandpaving.ie
+
 collections:
   - name: "blog"
     label: "Blog"
     folder: "blog"
     create: true
-    extension: "html"
+    extension: "md" # Change from html to md format for better editor experience
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -20,5 +28,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"} 
+      - {label: "Description", name: "description", widget: "text", hint: "A brief description of your blog post (shown in blog listings)"}
+      - {label: "Body", name: "body", widget: "markdown", hint: "Write your blog post content here. Use the toolbar to format your text."} 

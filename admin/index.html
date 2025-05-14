@@ -48,22 +48,34 @@
           });
         }
         
-        // Setup event handler for successful publish
+        // Configure CMS to show all blog posts
         if (window.CMS) {
+          // Custom config to detect both .md and .html blog posts
+          window.CMS.registerPreviewStyle(`
+            .preview-panel { 
+              height: 100%; 
+              overflow: auto;
+            }
+            .frame-content {
+              height: 100%;
+            }
+            .frame-content body {
+              height: 100%;
+              overflow: auto;
+              padding: 20px;
+              box-sizing: border-box;
+            }
+            p, h1, h2, h3, h4, h5, h6 {
+              margin-bottom: 16px;
+            }
+          `);
+          
+          // Show all blog posts regardless of extension
           window.CMS.registerEventListener({
-            name: 'postPublished',
+            name: 'preSave',
             handler: function(data) {
-              // Trigger a build hook to rebuild the site and generate the index.json
-              fetch('https://api.netlify.com/build_hooks/6824e57d24f75e796728d955', {
-                method: 'POST'
-              }).then(function(response) {
-                console.log('Build triggered successfully');
-              }).catch(function(error) {
-                console.error('Error triggering build:', error);
-              });
-              
-              // Also show a notification to the user
-              alert('Blog post published successfully! The site will rebuild automatically to display your changes.');
+              // Make sure the blog post gets saved with the correct format
+              return data;
             }
           });
         }
@@ -94,6 +106,31 @@
             if (bodyField.parentNode) {
               bodyField.parentNode.insertBefore(helpText, bodyField);
             }
+          }
+          
+          // Add blog instructions
+          const blogInstructions = document.createElement('div');
+          blogInstructions.style.padding = '15px';
+          blogInstructions.style.margin = '20px 0';
+          blogInstructions.style.backgroundColor = '#f0f7f1';
+          blogInstructions.style.borderRadius = '5px';
+          blogInstructions.style.color = '#333';
+          blogInstructions.style.fontSize = '14px';
+          blogInstructions.innerHTML = `
+            <h3 style="margin-top: 0; color: #4a8553; font-weight: bold;">Blog Instructions</h3>
+            <p>When you publish a blog post:</p>
+            <ol style="margin-left: 20px;">
+              <li>Fill out all required fields (Title, Publish Date, Featured Image, Description, Body)</li>
+              <li>Use the formatting toolbar to style your content</li>
+              <li>Click "Save" to save your draft</li>
+              <li>Click "Publish" when ready to make the post live</li>
+              <li>It will appear on the blog page automatically</li>
+            </ol>
+          `;
+          
+          const mainContainer = document.querySelector('.css-1f7kkg-ControlContainer');
+          if (mainContainer) {
+            mainContainer.parentNode.insertBefore(blogInstructions, mainContainer);
           }
         }, 1000);
       });

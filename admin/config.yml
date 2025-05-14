@@ -24,7 +24,14 @@ collections:
     label: "Blog"
     folder: "blog"
     create: true
+    extension: "md"
+    format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}} - {{year}}/{{month}}/{{day}}"
+    filter:
+      field: "title"
+      pattern: '.'
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}

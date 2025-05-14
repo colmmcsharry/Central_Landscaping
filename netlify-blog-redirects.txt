@@ -1,9 +1,0 @@
-# Add these to your _redirects file or Netlify configuration
-
-# Redirect any old blog post URLs to the new BlogHandy blog page
-/blog-viewer.html* /blog.html 301
-/blog/* /blog.html 301
-
-# If you renamed blog.html to blog.html, use these instead:
-# /blog-viewer.html* /blog.html 301
-# /blog/* /blog.html 301 

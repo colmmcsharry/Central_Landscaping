@@ -10,16 +10,14 @@
     "tailwindcss": "^2.2.4"
   },
   "scripts": {
-    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./styles.css && node blog/auto-index-generator.js",
-    "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css && node blog/auto-index-generator.js",
-    "watch": "watch 'npm run build' ./dist",
-    "generate-blog-index": "node blog/auto-index-generator.js"
+    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./styles.css",
+    "prod": "NODE_ENV=production postcss tailwind.css -o ./styles.css",
+    "watch": "watch 'npm run build' ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lightbox2": "^2.11.3",
-    "gray-matter": "^4.0.3"
+    "lightbox2": "^2.11.3"
   }
 }

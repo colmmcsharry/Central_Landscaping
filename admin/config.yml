@@ -1,16 +1,16 @@
 backend:
   name: git-gateway
-  branch: main # Or your main branch name
+  branch: main
 
-# This ensures the blog index is updated
+# Use editorial workflow to allow drafts
 publish_mode: editorial_workflow
 
 # Add hook for auto-generating index.json
 site_url: https://centrallandscapingandpaving.ie 
 local_backend: true
 
-media_folder: "images/blog" # Media files will be stored here
-public_folder: "/images/blog" # The src attribute for uploaded media
+media_folder: "images/blog"
+public_folder: "/images/blog"
 
 # Improve the Markdown editor experience
 editor:
@@ -24,15 +24,10 @@ collections:
     label: "Blog"
     folder: "blog"
     create: true
-    extension: "html" # Explicitly set HTML extension
-    format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Publish Date", name: "date", widget: "datetime", required: true}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: true}
-      - {label: "Description", name: "description", widget: "text", required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: true} 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"} 

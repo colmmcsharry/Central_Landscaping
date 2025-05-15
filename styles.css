@@ -2175,3 +2175,72 @@ blockquote {
     font-size: 0.95rem;
   }
 }
+
+/* Blog-specific styles */
+.blog-content-section #bh-posts h2 {
+  font-size: 2.25rem;  /* 36px */     /* Green color to match theme */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;    /* Bold */
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-content-section #bh-posts h3 {
+  font-size: 1.75rem;  /* 28px */
+  color: #555;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-content-section #bh-posts h4 {
+  font-size: 1.25rem;  /* 20px */
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-content-section #bh-posts p {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.blog-content-section #bh-posts ul, 
+.blog-content-section #bh-posts ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-content-section #bh-posts li {
+	font-family: 'Arial', sans-serif;
+}
+
+
+.blog-content-section #bh-posts a {
+  color: #4a8553;
+  text-decoration: underline;
+}
+
+.blog-content-section #bh-posts a:hover {
+  color: #366240;
+}
+
+/* Style blog images */
+.blog-content-section #bh-posts img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+}
+
+/* Add some spacing between blog posts if multiple appear */
+.blog-content-section #bh-posts > div {
+  margin-bottom: 3rem;
+}
+
+.powered_by {
+	display: none !important;
+}

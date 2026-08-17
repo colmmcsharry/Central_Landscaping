@@ -63,15 +63,15 @@ border:2px solid red;}
   z-index:30;
 }
 
-#lads {
+#plans {
   width:40vw;
   right:4vw;
   overflow:hidden;
-  top:10vh;
+  top:14vh;
 }
 
 @media screen and (max-width:1100px){
-  #lads{
+  #plans{
   display:none}
 
 }

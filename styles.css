@@ -1265,7 +1265,7 @@ ul.driveway-list li {
 
 .heroheading {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:var(--lightgreen)
+    color:#a8d98a;
 }
 
 #testimonialswrap {
@@ -1286,15 +1286,15 @@ border:2px solid red;}
   z-index:30;
 }
 
-#lads {
-  width:40vw;
-  right:4vw;
+#plans {
+  width:35vw;
+  right:2vw;
   overflow:hidden;
-  top:10vh;
+  top:28vh;
 }
 
 @media screen and (max-width:1100px){
-  #lads{
+  #plans{
   display:none}
 
 }
